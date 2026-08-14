@@ -4,455 +4,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cultural Day - DCC | CSE-25 | 2026</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Montserrat:wght@500;600;700&family=Alex+Brush&display=swap"
-        rel="stylesheet">
-
-    <style>
-        /* ==========================================
-       RESET & BASE STYLES
-       ========================================== */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: #040814;
-            background-image:
-                radial-gradient(circle at 50% 20%, #0d1b38 0%, #040814 80%),
-                radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0, 0, 0, 0)),
-                radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0, 0, 0, 0)),
-                radial-gradient(1.5px 1.5px at 90px 40px, #ffffff, rgba(0, 0, 0, 0)),
-                radial-gradient(2px 2px at 160px 120px, #ffffff, rgba(0, 0, 0, 0));
-            background-repeat: repeat;
-            background-size: 100% 100%, 200px 200px, 300px 300px, 250px 250px, 350px 350px;
-            font-family: 'Cormorant Garamond', serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 40px 20px;
-            color: #0d2137;
-        }
-
-        /* ==========================================
-       CARD CONTAINER
-       ========================================== */
-        .poster-card {
-            width: 100%;
-            max-width: 650px;
-            background-color: #f4ea8a;
-            background: radial-gradient(circle at center, #fbf5e8 0%, #efe1c7 100%);
-            border-radius: 180px 180px 20px 20px;
-            padding: 12px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6),
-                0 0 30px rgba(212, 175, 55, 0.2);
-            position: relative;
-        }
-
-        /* Double Inner Border Frame */
-        .card-border-outer {
-            border: 2px solid #b88f51;
-            border-radius: 170px 170px 12px 12px;
-            padding: 6px;
-        }
-
-        .card-border-inner {
-            border: 1px solid #c9a566;
-            border-radius: 164px 164px 8px 8px;
-            padding: 40px 30px 30px 30px;
-            text-align: center;
-            position: relative;
-        }
-
-        /* ==========================================
-       LOGO & HEADER
-       ========================================== */
-        .logo-container {
-            margin-top: 10px;
-            margin-bottom: 8px;
-        }
-
-        .dcc-logo {
-            height: 75px;
-            width: auto;
-            object-fit: contain;
-        }
-
-        .header-tag {
-            font-family: 'Cinzel', serif;
-            font-weight: 700;
-            font-size: 14px;
-            letter-spacing: 2px;
-            color: #0b1d3a;
-            margin-bottom: 12px;
-        }
-
-        .sub-tagline {
-            font-family: 'Cinzel', serif;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 3px;
-            color: #0b1d3a;
-            margin-bottom: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        /* ==========================================
-       MAIN TITLE
-       ========================================== */
-        .main-title {
-            font-family: 'Cinzel', serif;
-            color: #081733;
-            text-transform: uppercase;
-            line-height: 0.95;
-            margin-bottom: 20px;
-        }
-
-        .title-cultural {
-            font-size: 54px;
-            font-weight: 800;
-            letter-spacing: 3px;
-            display: block;
-        }
-
-        .title-day-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .title-day {
-            font-size: 58px;
-            font-weight: 800;
-            letter-spacing: 4px;
-        }
-
-        .flourish-svg {
-            width: 50px;
-            height: 15px;
-            fill: none;
-            stroke: #b88f51;
-            stroke-width: 1.5;
-        }
-
-        /* ==========================================
-       BODY TEXT & QUOTES
-       ========================================== */
-        .quote {
-            font-size: 21px;
-            font-style: italic;
-            color: #2b2b2b;
-            margin-bottom: 12px;
-            font-weight: 500;
-        }
-
-        .heart-divider {
-            color: #631c1c;
-            font-size: 12px;
-            margin: 10px 0;
-        }
-
-        .invitation-body {
-            color: #1a1a1a;
-            font-size: 19px;
-            line-height: 1.45;
-            margin-bottom: 10px;
-        }
-
-        .salutation {
-            color: #631c1c;
-            font-weight: 700;
-            font-size: 20px;
-            margin-bottom: 8px;
-        }
-
-        /* ==========================================
-       EVENT DETAILS BOX
-       ========================================== */
-        .details-box {
-            border: 1px solid #caaa6a;
-            border-radius: 12px;
-            background: rgba(255, 255, 255, 0.25);
-            display: grid;
-            grid-template-columns: 1fr 1fr 1.3fr;
-            padding: 20px 10px;
-            margin: 25px 0;
-            position: relative;
-        }
-
-        .detail-col {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            padding: 0 8px;
-            position: relative;
-        }
-
-        .detail-col:not(:last-child)::after {
-            content: "";
-            position: absolute;
-            right: 0;
-            top: 10%;
-            height: 80%;
-            width: 1px;
-            background-color: #caa867;
-        }
-
-        .icon-svg {
-            width: 32px;
-            height: 32px;
-            fill: #631c1c;
-            margin-bottom: 8px;
-        }
-
-        .col-label {
-            font-family: 'Cinzel', serif;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            color: #0b1d3a;
-            margin-bottom: 6px;
-        }
-
-        .col-value {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 13px;
-            font-weight: 700;
-            color: #0b1d3a;
-            text-transform: uppercase;
-            line-height: 1.3;
-        }
-
-        .col-sub {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 11px;
-            font-weight: 600;
-            color: #4a4a4a;
-            margin-top: 3px;
-            text-transform: uppercase;
-        }
-
-        /* ==========================================
-       CALL TO ACTION & FOOTER
-       ========================================== */
-        .closing-quote {
-            font-family: 'Cormorant Garamond', serif;
-            font-style: italic;
-            font-size: 22px;
-            font-weight: 600;
-            color: #1a1a1a;
-            margin-top: 10px;
-        }
-
-        .outer-footer {
-            text-align: center;
-            margin-top: 25px;
-            color: #d1b173;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .code-icon {
-            font-weight: 700;
-            font-size: 18px;
-            color: #d1b173;
-            margin-bottom: 6px;
-            letter-spacing: 2px;
-        }
-
-        .copyright {
-            font-size: 12px;
-            letter-spacing: 1.5px;
-            margin-bottom: 4px;
-            font-weight: 600;
-        }
-
-        .tagline {
-            font-size: 11px;
-            color: #8c9ba5;
-            letter-spacing: 0.5px;
-        }
-
-        .footer-heart {
-            color: #b88f51;
-            font-size: 10px;
-            margin-top: 6px;
-        }
-
-        /* ==========================================
-       RESPONSIVE ADJUSTMENTS
-       ========================================== */
-        @media (max-width: 500px) {
-            .poster-card {
-                border-radius: 100px 100px 16px 16px;
-            }
-
-            .card-border-outer {
-                border-radius: 90px 90px 10px 10px;
-            }
-
-            .card-border-inner {
-                border-radius: 84px 84px 6px 6px;
-                padding: 25px 15px 20px 15px;
-            }
-
-            .title-cultural {
-                font-size: 38px;
-            }
-
-            .title-day {
-                font-size: 42px;
-            }
-
-            .flourish-svg {
-                width: 30px;
-            }
-
-            .details-box {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .detail-col:not(:last-child)::after {
-                display: none;
-            }
-
-            .detail-col:not(:last-child) {
-                border-bottom: 1px solid #caa867;
-                padding-bottom: 15px;
-            }
-        }
-    </style>
+    <title>DCC | CSE-25 - Cultural Day | 2026</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <div class="wrapper">
-        <!-- Main Card Container -->
-        <div class="poster-card">
+        <!-- Fixed Tiny Saturn Accent (Top Left) -->
+        <div class="celestial saturn">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="50" cy="50" rx="40" ry="12" fill="none" stroke="#e6cb8b" stroke-width="5"
+                    transform="rotate(-20 50 50)" />
+                <circle cx="50" cy="50" r="22" fill="#cba358" />
+                <path d="M 12 45 A 40 12 0 0 1 88 39" fill="none" stroke="#e6cb8b" stroke-width="5"
+                    transform="rotate(-20 50 50)" />
+            </svg>
+        </div>
+
+        <!-- Fixed Tiny Crescent Moon Accent (Top Right) -->
+        <div class="celestial moon">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 50 10 A 38 38 0 1 0 88 62 A 32 32 0 1 1 50 10 Z" fill="#e6cb8b" />
+            </svg>
+        </div>
+
+        <!-- Animated Background Sparkles & Star Accents -->
+        <div class="sparkle sp-1">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" fill="#e6cb8b" />
+            </svg>
+        </div>
+        <div class="sparkle sp-2">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" fill="#ffffff" />
+            </svg>
+        </div>
+        <div class="sparkle sp-3">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" fill="#cba358" />
+            </svg>
+        </div>
+        <div class="sparkle sp-4">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" fill="#e6cb8b" />
+            </svg>
+        </div>
+        <div class="sparkle sp-5">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" fill="#ffffff" />
+            </svg>
+        </div>
+        <div class="sparkle sp-6">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" fill="#e6cb8b" />
+            </svg>
+        </div>
+
+        <!-- Main Invitation Poster Card -->
+        <main class="poster-card">
             <div class="card-border-outer">
                 <div class="card-border-inner">
 
-                    <!-- Logo & Header Tag -->
+                    <!-- Logo -->
                     <div class="logo-container">
-                        <img src="./assets/DCC_Logo.webp" alt="DCC Logo" class="dcc-logo">
+                        <img src="./assets/DCC_Logo.webp" alt="DCC Logo" class="dcc-logo"
+                            onerror="this.style.display='none'">
                     </div>
-                    <div class="header-tag">DCC &nbsp;|&nbsp; CSE-25</div>
 
+                    <!-- Header Subtitles -->
+                    <p class="header-tag">DCC &nbsp;|&nbsp; CSE-25</p>
                     <div class="sub-tagline">
                         <span>✦</span> A DAY TO CELEBRATE US <span>✦</span>
                     </div>
 
-                    <!-- Main Title -->
-                    <div class="main-title">
+                    <!-- Title -->
+                    <h1 class="main-title">
                         <span class="title-cultural">CULTURAL</span>
                         <div class="title-day-wrapper">
-                            <!-- Left Flourish -->
-                            <svg class="flourish-svg" viewBox="0 0 100 30">
-                                <path d="M100,15 Q50,0 0,15 Q50,30 100,15 Z" fill="#b88f51" />
+                            <svg class="flourish-svg" viewBox="0 0 100 20">
+                                <path d="M 0 10 Q 25 0, 50 10 T 100 10" />
                             </svg>
-
                             <span class="title-day">DAY</span>
-
-                            <!-- Right Flourish -->
-                            <svg class="flourish-svg" viewBox="0 0 100 30">
-                                <path d="M0,15 Q50,0 100,15 Q50,30 0,15 Z" fill="#b88f51" />
+                            <svg class="flourish-svg" viewBox="0 0 100 20" style="transform: scaleX(-1);">
+                                <path d="M 0 10 Q 25 0, 50 10 T 100 10" />
                             </svg>
                         </div>
-                    </div>
-
-                    <!-- Quote -->
-                    <p class="quote">“A day of colors, creativity, laughter<br>and memories.”</p>
-
-                    <div class="heart-divider">♥</div>
+                    </h1>
 
                     <!-- Body Text -->
-                    <div class="invitation-body">
-                        <p class="salutation">Dear Teachers and Fellow Students,</p>
-                        <p>Let’s take a break from the routine,<br>
-                            celebrate our journey, our hard work,<br>
-                            our laughter, and the bond we share.</p>
-                        <br>
-                        <p>You’re invited to this special day<br>
-                            to make more memories together!</p>
-                    </div>
-
+                    <p class="quote">“A day of colors, creativity, laughter<br>and memories.”</p>
                     <div class="heart-divider">♥</div>
+                    <p class="salutation">Dear Teachers and Fellow Students,</p>
+                    <p class="invitation-body">
+                        Let’s take a break from the routine, celebrate our journey, our hard work, our laughter, and the
+                        bond we share.
+                    </p>
+                    <p class="invitation-body" style="margin-top: 14px;">
+                        You’re invited to this special day to make more memories together!
+                    </p>
+                    <div class="heart-divider" style="margin-top: 14px;">♥</div>
 
-                    <!-- Details Grid -->
+                    <!-- Event Details Grid -->
                     <div class="details-box">
-
-                        <!-- Date -->
                         <div class="detail-col">
                             <svg class="icon-svg" viewBox="0 0 24 24">
                                 <path
-                                    d="M19,4H18V2H16V4H8V2H6V4H5C3.89,4 3,4.89 3,6V20A2,2 0 0,0 5,22H19A2,2 0 0,0 21,20V6A2,2 0 0,0 19,4M19,20H5V9H19V20M19,7H5V6H19V7Z" />
-                                <circle cx="8" cy="12" r="1.2" />
-                                <circle cx="12" cy="12" r="1.2" />
-                                <circle cx="16" cy="12" r="1.2" />
-                                <circle cx="8" cy="16" r="1.2" />
-                                <circle cx="12" cy="16" r="1.2" />
-                                <circle cx="16" cy="16" r="1.2" />
+                                    d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z" />
                             </svg>
-                            <div class="col-label">DATE</div>
-                            <div class="col-value">18 AUGUST 2026</div>
-                            <div class="col-sub">TUESDAY</div>
+                            <span class="col-label">DATE</span>
+                            <span class="col-value">18 August 2026</span>
+                            <span class="col-sub">TUESDAY</span>
                         </div>
 
-                        <!-- Time -->
                         <div class="detail-col">
                             <svg class="icon-svg" viewBox="0 0 24 24">
                                 <path
-                                    d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12.5,7H11V13L16.2,16.2L17,14.9L12.5,12.2V7Z" />
+                                    d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
                             </svg>
-                            <div class="col-label">TIME</div>
-                            <div class="col-value">10:30 AM</div>
-                            <div class="col-sub">ONWARDS</div>
+                            <span class="col-label">TIME</span>
+                            <span class="col-value">10:30 AM</span>
+                            <span class="col-sub">ONWARDS</span>
                         </div>
 
-                        <!-- Venue -->
                         <div class="detail-col">
                             <svg class="icon-svg" viewBox="0 0 24 24">
                                 <path
-                                    d="M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5Z" />
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                             </svg>
-                            <div class="col-label">VENUE</div>
-                            <div class="col-value">SEMINAR HALL, 6TH FLOOR,<br>CSE DEPARTMENT,</div>
-                            <div class="col-sub" style="font-weight: 700; color: #0b1d3a; margin-top:2px;"></div>
-                                <div class="col-sub">DHAKA CITY
-                                COLLEGE</div>
+                            <span class="col-label">VENUE</span>
+                            <span class="col-value">SEMINAR HALL, 6TH FLOOR, CSE DEPT.</span>
+                            <span class="col-sub">DHAKA CITY COLLEGE</span>
                         </div>
-
                     </div>
 
-                    <!-- Closing Line -->
-                    <div class="closing-quote">
-                       ~ Come, let's make another memory together! ~
-                    </div>
+                    <!-- Script Closing -->
+                    <p class="closing-quote">See you all there!</p>
 
                 </div>
             </div>
-        </div>
+        </main>
 
         <!-- Outer Footer -->
-        <div class="outer-footer">
+        <footer class="outer-footer">
             <div class="code-icon">&lt;/&gt;</div>
-            <div class="copyright">&copy; 2026 DCC | CSE-25</div>
-            <div class="tagline">Created with memories, moments &amp; a little code.</div>
+            <p class="copyright">DCC &bull; CSE 25th BATCH</p>
+            <p class="tagline">Crafted with passion &bull; Dedicated to our memories</p>
             <div class="footer-heart">♥</div>
-        </div>
+        </footer>
     </div>
 
 </body>
