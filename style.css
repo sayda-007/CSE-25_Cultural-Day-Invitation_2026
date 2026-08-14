@@ -1,5 +1,5 @@
 /* ==================================================
-   RESET
+   RESET DEFAULT BROWSER STYLES
    ================================================== */
 
 * {
@@ -33,48 +33,125 @@ body {
     background:
 
         /* ==================================================
-           TINY GOLDEN STARS
+           SMALL STARS
            ================================================== */
 
-        radial-gradient(circle at 7% 10%, #f4d58a 0 1px, transparent 2px),
-        radial-gradient(circle at 16% 24%, #f4d58a 0 1px, transparent 2px),
-        radial-gradient(circle at 27% 8%, #f4d58a 0 1px, transparent 2px),
-        radial-gradient(circle at 38% 19%, #f4d58a 0 1px, transparent 2px),
-        radial-gradient(circle at 49% 7%, #f4d58a 0 1px, transparent 2px),
-        radial-gradient(circle at 61% 16%, #f4d58a 0 1px, transparent 2px),
-        radial-gradient(circle at 73% 7%, #f4d58a 0 1px, transparent 2px),
-        radial-gradient(circle at 84% 22%, #f4d58a 0 1px, transparent 2px),
-        radial-gradient(circle at 94% 10%, #f4d58a 0 1px, transparent 2px),
+        radial-gradient(circle at 7% 10%,
+            #f4d58a 0 1px,
+            transparent 2px),
 
-        radial-gradient(circle at 12% 43%, #f4d58a 0 1px, transparent 2px),
-        radial-gradient(circle at 24% 55%, #f4d58a 0 1px, transparent 2px),
-        radial-gradient(circle at 36% 42%, #f4d58a 0 1px, transparent 2px),
-        radial-gradient(circle at 52% 53%, #f4d58a 0 1px, transparent 2px),
-        radial-gradient(circle at 68% 43%, #f4d58a 0 1px, transparent 2px),
-        radial-gradient(circle at 82% 54%, #f4d58a 0 1px, transparent 2px),
-        radial-gradient(circle at 94% 46%, #f4d58a 0 1px, transparent 2px),
+        radial-gradient(circle at 16% 24%,
+            #f4d58a 0 1px,
+            transparent 2px),
 
-        radial-gradient(circle at 8% 73%, #f4d58a 0 1px, transparent 2px),
-        radial-gradient(circle at 21% 87%, #f4d58a 0 1px, transparent 2px),
-        radial-gradient(circle at 43% 76%, #f4d58a 0 1px, transparent 2px),
-        radial-gradient(circle at 57% 91%, #f4d58a 0 1px, transparent 2px),
-        radial-gradient(circle at 76% 78%, #f4d58a 0 1px, transparent 2px),
-        radial-gradient(circle at 91% 88%, #f4d58a 0 1px, transparent 2px),
+        radial-gradient(circle at 27% 8%,
+            #f4d58a 0 1px,
+            transparent 2px),
+
+        radial-gradient(circle at 38% 19%,
+            #f4d58a 0 1px,
+            transparent 2px),
+
+        radial-gradient(circle at 49% 7%,
+            #f4d58a 0 1px,
+            transparent 2px),
+
+        radial-gradient(circle at 61% 16%,
+            #f4d58a 0 1px,
+            transparent 2px),
+
+        radial-gradient(circle at 73% 7%,
+            #f4d58a 0 1px,
+            transparent 2px),
+
+        radial-gradient(circle at 84% 22%,
+            #f4d58a 0 1px,
+            transparent 2px),
+
+        radial-gradient(circle at 94% 10%,
+            #f4d58a 0 1px,
+            transparent 2px),
+
+        radial-gradient(circle at 12% 43%,
+            #f4d58a 0 1px,
+            transparent 2px),
+
+        radial-gradient(circle at 24% 55%,
+            #f4d58a 0 1px,
+            transparent 2px),
+
+        radial-gradient(circle at 36% 42%,
+            #f4d58a 0 1px,
+            transparent 2px),
+
+        radial-gradient(circle at 52% 53%,
+            #f4d58a 0 1px,
+            transparent 2px),
+
+        radial-gradient(circle at 68% 43%,
+            #f4d58a 0 1px,
+            transparent 2px),
+
+        radial-gradient(circle at 82% 54%,
+            #f4d58a 0 1px,
+            transparent 2px),
+
+        radial-gradient(circle at 94% 46%,
+            #f4d58a 0 1px,
+            transparent 2px),
+
+        radial-gradient(circle at 8% 73%,
+            #f4d58a 0 1px,
+            transparent 2px),
+
+        radial-gradient(circle at 21% 87%,
+            #f4d58a 0 1px,
+            transparent 2px),
+
+        radial-gradient(circle at 43% 76%,
+            #f4d58a 0 1px,
+            transparent 2px),
+
+        radial-gradient(circle at 57% 91%,
+            #f4d58a 0 1px,
+            transparent 2px),
+
+        radial-gradient(circle at 76% 78%,
+            #f4d58a 0 1px,
+            transparent 2px),
+
+        radial-gradient(circle at 91% 88%,
+            #f4d58a 0 1px,
+            transparent 2px),
 
 
         /* ==================================================
            BRIGHTER STARS
            ================================================== */
 
-        radial-gradient(circle at 22% 15%, #ffe7a6 0 1.5px, transparent 3px),
-        radial-gradient(circle at 67% 27%, #ffe7a6 0 1.5px, transparent 3px),
-        radial-gradient(circle at 87% 39%, #ffe7a6 0 1.5px, transparent 3px),
-        radial-gradient(circle at 32% 67%, #ffe7a6 0 1.5px, transparent 3px),
-        radial-gradient(circle at 72% 72%, #ffe7a6 0 1.5px, transparent 3px),
+        radial-gradient(circle at 22% 15%,
+            #ffe7a6 0 1.5px,
+            transparent 3px),
+
+        radial-gradient(circle at 67% 27%,
+            #ffe7a6 0 1.5px,
+            transparent 3px),
+
+        radial-gradient(circle at 87% 39%,
+            #ffe7a6 0 1.5px,
+            transparent 3px),
+
+        radial-gradient(circle at 32% 67%,
+            #ffe7a6 0 1.5px,
+            transparent 3px),
+
+        radial-gradient(circle at 72% 72%,
+            #ffe7a6 0 1.5px,
+            transparent 3px),
 
 
         /* ==================================================
-           BLUE COSMIC NEBULA
+           COSMIC GLOW
            ================================================== */
 
         radial-gradient(ellipse at 15% 25%,
@@ -93,7 +170,7 @@ body {
 
 
         /* ==================================================
-           DEEP SPACE
+           MAIN NAVY BACKGROUND
            ================================================== */
 
         linear-gradient(135deg,
@@ -105,42 +182,46 @@ body {
 
 
 /* ==================================================
-   SATURN
+   SATURN DECORATION
    ================================================== */
 
 .saturn {
 
     position: absolute;
 
-    width: 125px;
+    width: 82px;
 
-    top: 45px;
+    top: 35px;
 
-    left: 50px;
+    left: 45px;
 
     z-index: 0;
 
     pointer-events: none;
+
+    user-select: none;
 }
 
 
 /* ==================================================
-   MOON
+   CRESCENT MOON DECORATION
    ================================================== */
 
 .moon {
 
     position: absolute;
 
-    width: 80px;
+    width: 54px;
 
-    top: 55px;
+    top: 42px;
 
-    right: 60px;
+    right: 50px;
 
     z-index: 0;
 
     pointer-events: none;
+
+    user-select: none;
 
     filter: sepia(1) saturate(1.5);
 }
@@ -153,8 +234,6 @@ body {
 .invitation {
 
     width: min(88%, 900px);
-
-    min-height: auto;
 
     margin: 90px auto;
 
@@ -188,7 +267,7 @@ body {
    DCC LOGO
    ================================================== */
 
-.dcc-logo {
+.invitation-header img {
 
     width: 120px;
 
@@ -206,7 +285,10 @@ body {
 
 .batch {
 
-    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-family:
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
 
     font-size: 1.05rem;
 
@@ -226,7 +308,10 @@ body {
 
     margin-top: 12px;
 
-    font-family: Georgia, "Times New Roman", serif;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
     font-size: 0.85rem;
 
@@ -244,66 +329,13 @@ body {
 
     display: flex;
 
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 18px;
-
-    margin: 40px 0 20px;
-}
-
-
-/* ==================================================
-   TITLE DECORATIONS
-   ================================================== */
-
-.title-decoration {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    width: 55px;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 1.7rem;
-
-    line-height: 1;
-
-    color: #b28a4a;
-
-}
-
-
-/* ==================================================
-   MAIN TITLE
-   ================================================== */
-
-.main-title {
-
-    display: flex;
-
     flex-direction: column;
 
     align-items: center;
 
     justify-content: center;
 
-    text-align: center;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: clamp(3rem, 7vw, 5.5rem);
-
-    line-height: 0.95;
-
-    font-weight: 700;
-
-    margin: 0;
+    margin: 40px 0 20px;
 }
 
 
@@ -311,8 +343,66 @@ body {
    CULTURAL
    ================================================== */
 
-.main-title span:first-child {
+.main-title {
+
+    margin: 0;
+
+    text-align: center;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(3rem, 7vw, 5.5rem);
+
+    line-height: 0.9;
+
+    font-weight: 700;
+
     color: #071e49;
+}
+
+
+/* ==================================================
+   DAY ROW
+   ================================================== */
+
+.day-title {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 8px;
+}
+
+
+/* ==================================================
+   〰 BESIDE DAY
+   ================================================== */
+
+.title-decoration {
+
+    display: block;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1.5rem;
+
+    line-height: 1;
+
+    color: #b28a4a;
+
+    transform: translateY(-2px);
 }
 
 
@@ -320,11 +410,21 @@ body {
    DAY
    ================================================== */
 
-.main-title span:last-child {
+.day-text {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(2.5rem, 6vw, 4.5rem);
+
+    line-height: 0.9;
+
+    font-weight: 700;
 
     color: #7b2430;
-
-    margin-top: 10px;
 }
 
 
@@ -338,9 +438,14 @@ body {
 
     margin: 25px auto 0;
 
+    padding: 0 10px;
+
     text-align: center;
 
-    font-family: Georgia, "Times New Roman", serif;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
     font-size: 1.15rem;
 
@@ -389,20 +494,6 @@ body {
 
 
 /* ==================================================
-   MESSAGE DECORATION
-   ================================================== */
-
-.message-decoration {
-
-    margin-bottom: 20px;
-
-    font-size: 1.25rem;
-
-    color: #b28a4a;
-}
-
-
-/* ==================================================
    MESSAGE HEADING
    ================================================== */
 
@@ -410,7 +501,10 @@ body {
 
     margin-bottom: 25px;
 
-    font-family: Georgia, "Times New Roman", serif;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
     font-size: 1.8rem;
 
@@ -430,7 +524,10 @@ body {
 
     margin-bottom: 12px;
 
-    font-family: Georgia, "Times New Roman", serif;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
     font-size: 1.05rem;
 
@@ -455,6 +552,8 @@ body {
     gap: 15px;
 
     margin-top: 45px;
+
+    width: 100%;
 }
 
 
@@ -468,7 +567,7 @@ body {
 
     min-width: 0;
 
-    padding: 25px 18px;
+    padding: 25px 15px;
 
     text-align: center;
 
@@ -476,31 +575,40 @@ body {
 
     border-radius: 15px;
 
-    background: rgba(255, 255, 255, 0.25);
+    background:
+        rgba(255, 255, 255, 0.25);
+
+    overflow: hidden;
 }
 
 
 /* ==================================================
-   EVENT SVG ICON
+   EVENT SVG ICONS
    ================================================== */
 
 .event-icon {
 
     display: block;
 
-    width: 46px;
+    width: 42px;
 
-    height: 46px;
+    height: 42px;
 
-    min-width: 46px;
+    min-width: 42px;
 
-    min-height: 46px;
+    min-height: 42px;
+
+    max-width: 42px;
+
+    max-height: 42px;
+
+    margin: 0 auto 17px;
 
     object-fit: contain;
 
-    margin: 0 auto 16px;
+    object-position: center;
 
-    flex-shrink: 0;
+    flex: 0 0 auto;
 }
 
 
@@ -510,11 +618,16 @@ body {
 
 .event-item h2 {
 
-    margin-bottom: 12px;
+    margin: 0 0 12px;
 
-    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-family:
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
 
     font-size: 1.05rem;
+
+    line-height: 1.2;
 
     font-weight: 700;
 
@@ -532,9 +645,12 @@ body {
 
 .event-item p {
 
-    margin-bottom: 8px;
+    margin: 0 0 8px;
 
-    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-family:
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
 
     font-size: 1.08rem;
 
@@ -542,9 +658,9 @@ body {
 
     font-weight: 700;
 
-    letter-spacing: 0.3px;
-
     color: #061d47;
+
+    overflow-wrap: break-word;
 }
 
 
@@ -556,7 +672,10 @@ body {
 
     display: block;
 
-    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-family:
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
 
     font-size: 0.92rem;
 
@@ -567,7 +686,7 @@ body {
 
 
 /* ==================================================
-   VENUE TEXT
+   VENUE
    ================================================== */
 
 .event-item:nth-child(3) p {
@@ -620,7 +739,10 @@ body {
 
     margin-bottom: 25px;
 
-    font-family: Georgia, "Times New Roman", serif;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
     font-size: 1.15rem;
 
@@ -640,7 +762,9 @@ body {
 
     margin-bottom: 20px;
 
-    font-family: "Courier New", monospace;
+    font-family:
+        "Courier New",
+        monospace;
 
     font-size: 1.7rem;
 
@@ -658,7 +782,10 @@ body {
 
     margin-bottom: 12px;
 
-    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-family:
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
 
     font-size: 0.9rem;
 
@@ -676,7 +803,10 @@ body {
 
 .footer-description {
 
-    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-family:
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
 
     font-size: 0.88rem;
 
@@ -689,34 +819,10 @@ body {
 
 
 /* ==================================================
-   FOOTER HEART
-   ================================================== */
-
-.footer-heart {
-
-    margin-top: 15px;
-
-    font-size: 1.1rem;
-
-    color: #b28a4a;
-}
-
-
-/* ==================================================
    MOBILE RESPONSIVE DESIGN
    ================================================== */
 
 @media (max-width: 600px) {
-
-
-    /* ==================================================
-       BODY
-       ================================================== */
-
-    body {
-
-        padding: 0 0 30px;
-    }
 
 
     /* ==================================================
@@ -725,7 +831,7 @@ body {
 
     .saturn {
 
-        width: 55px;
+        width: 48px;
 
         top: 22px;
 
@@ -739,11 +845,11 @@ body {
 
     .moon {
 
-        width: 62px;
+        width: 48px;
 
-        top: 28px;
+        top: 27px;
 
-        right: 8px;
+        right: 10px;
     }
 
 
@@ -753,13 +859,13 @@ body {
 
     .invitation {
 
-        width: calc(100% - 32px);
+        width: calc(100% - 28px);
 
-        margin: 145px auto 45px;
+        margin: 115px auto 40px;
 
-        padding: 30px 20px;
+        padding: 30px 18px;
 
-        border-radius: 24px;
+        border-radius: 22px;
     }
 
 
@@ -767,9 +873,9 @@ body {
        LOGO
        ================================================== */
 
-    .dcc-logo {
+    .invitation-header img {
 
-        width: 95px;
+        width: 90px;
 
         margin-bottom: 18px;
     }
@@ -783,7 +889,7 @@ body {
 
         font-size: 0.82rem;
 
-        letter-spacing: 3px;
+        letter-spacing: 2.5px;
     }
 
 
@@ -795,9 +901,9 @@ body {
 
         margin-top: 10px;
 
-        font-size: 0.65rem;
+        font-size: 0.62rem;
 
-        letter-spacing: 2.5px;
+        letter-spacing: 2px;
     }
 
 
@@ -807,43 +913,59 @@ body {
 
     .title-wrapper {
 
-        gap: 6px;
-
         margin: 35px 0 18px;
     }
 
 
     /* ==================================================
-       TITLE DECORATION
-       ================================================== */
-
-    .title-decoration {
-
-        width: 35px;
-
-        font-size: 1.15rem;
-    }
-
-
-    /* ==================================================
-       MAIN TITLE
+       CULTURAL — MOBILE
        ================================================== */
 
     .main-title {
 
-        font-size: clamp(2.7rem, 13vw, 4rem);
+        font-size:
+            clamp(2.65rem, 12vw, 4rem);
 
-        line-height: 0.95;
+        line-height: 0.9;
     }
 
 
     /* ==================================================
-       DAY
+       DAY ROW — MOBILE
        ================================================== */
 
-    .main-title span:last-child {
+    .day-title {
 
-        margin-top: 8px;
+        gap: 7px;
+
+        margin-top: 7px;
+
+        width: 100%;
+    }
+
+
+    /* ==================================================
+       〰 — MOBILE
+       ================================================== */
+
+    .title-decoration {
+
+        font-size: 1rem;
+
+        transform: translateY(-1px);
+    }
+
+
+    /* ==================================================
+       DAY — MOBILE
+       ================================================== */
+
+    .day-text {
+
+        font-size:
+            clamp(2.35rem, 11vw, 3.6rem);
+
+        line-height: 0.9;
     }
 
 
@@ -855,11 +977,11 @@ body {
 
         margin-top: 22px;
 
-        font-size: 0.95rem;
+        padding: 0 4px;
 
-        line-height: 1.6;
+        font-size: 0.92rem;
 
-        padding: 0 5px;
+        line-height: 1.65;
     }
 
 
@@ -885,9 +1007,9 @@ body {
 
         margin-bottom: 22px;
 
-        font-size: 1.35rem;
+        font-size: 1.3rem;
 
-        line-height: 1.35;
+        line-height: 1.4;
     }
 
 
@@ -895,7 +1017,7 @@ body {
 
         margin-bottom: 12px;
 
-        font-size: 0.98rem;
+        font-size: 0.95rem;
 
         line-height: 1.75;
     }
@@ -907,25 +1029,29 @@ body {
 
     .event-details {
 
+        width: 100%;
+
+        display: flex;
+
         flex-direction: column;
 
-        gap: 16px;
+        gap: 15px;
 
         margin-top: 40px;
     }
 
 
     /* ==================================================
-       EVENT ITEM
+       EVENT BOX
        ================================================== */
 
     .event-item {
 
         width: 100%;
 
-        min-height: 180px;
+        flex: none;
 
-        padding: 25px 18px;
+        padding: 25px 15px 27px;
 
         display: flex;
 
@@ -934,30 +1060,34 @@ body {
         align-items: center;
 
         justify-content: flex-start;
+
+        text-align: center;
+
+        overflow: hidden;
     }
 
 
     /* ==================================================
-       EVENT SVG
+       EVENT SVG — MOBILE
        ================================================== */
 
     .event-icon {
 
-        width: 50px;
+        width: 44px;
 
-        height: 50px;
+        height: 44px;
 
-        min-width: 50px;
+        min-width: 44px;
 
-        min-height: 50px;
+        min-height: 44px;
 
-        display: block;
+        max-width: 44px;
 
-        object-fit: contain;
+        max-height: 44px;
 
         margin: 0 auto 17px;
 
-        flex: 0 0 auto;
+        object-fit: contain;
     }
 
 
@@ -967,13 +1097,15 @@ body {
 
     .event-item h2 {
 
-        margin-bottom: 11px;
+        width: 100%;
 
-        font-size: 1.08rem;
+        margin: 0 0 11px;
 
-        letter-spacing: 3px;
+        font-size: 1.05rem;
 
         line-height: 1.2;
+
+        letter-spacing: 2.5px;
     }
 
 
@@ -983,13 +1115,15 @@ body {
 
     .event-item p {
 
-        margin-bottom: 7px;
+        width: 100%;
 
-        font-size: 1.03rem;
+        margin: 0 0 7px;
+
+        font-size: 1rem;
 
         line-height: 1.55;
 
-        letter-spacing: 0.2px;
+        overflow-wrap: anywhere;
     }
 
 
@@ -999,9 +1133,11 @@ body {
 
     .event-item span {
 
-        font-size: 0.92rem;
+        width: 100%;
 
-        line-height: 1.45;
+        font-size: 0.9rem;
+
+        line-height: 1.5;
     }
 
 
@@ -1011,7 +1147,7 @@ body {
 
     .event-item:nth-child(3) p {
 
-        font-size: 0.97rem;
+        font-size: 0.94rem;
 
         line-height: 1.5;
     }
@@ -1035,11 +1171,13 @@ body {
 
     .closing-message {
 
-        font-size: 1rem;
+        margin-bottom: 22px;
 
-        line-height: 1.5;
+        padding: 0 8px;
 
-        padding: 0 10px;
+        font-size: 0.98rem;
+
+        line-height: 1.55;
     }
 
 
@@ -1049,9 +1187,9 @@ body {
 
     .code-symbol {
 
-        font-size: 1.5rem;
-
         margin-bottom: 17px;
+
+        font-size: 1.45rem;
     }
 
 
@@ -1065,8 +1203,9 @@ body {
 
         font-size: 0.82rem;
 
-        letter-spacing: 2px;
+        letter-spacing: 1.8px;
 
+        line-height: 1.4;
     }
 
 
@@ -1076,15 +1215,14 @@ body {
 
     .footer-description {
 
-        font-size: 0.78rem;
+        padding: 0 10px;
 
-        letter-spacing: 0.3px;
+        font-size: 0.76rem;
 
-        line-height: 1.55;
+        line-height: 1.6;
 
-        padding: 0 15px;
+        letter-spacing: 0.2px;
     }
-
 }
 
 
@@ -1101,9 +1239,11 @@ body {
 
     .saturn {
 
-        width: 50px;
+        width: 42px;
 
-        left: 5px;
+        top: 20px;
+
+        left: 6px;
     }
 
 
@@ -1113,23 +1253,25 @@ body {
 
     .moon {
 
-        width: 58px;
+        width: 42px;
 
-        right: 5px;
+        top: 25px;
+
+        right: 7px;
     }
 
 
     /* ==================================================
-       INVITATION
+       CARD
        ================================================== */
 
     .invitation {
 
-        width: calc(100% - 24px);
+        width: calc(100% - 20px);
 
-        margin-top: 125px;
+        margin-top: 105px;
 
-        padding: 25px 16px;
+        padding: 26px 14px;
     }
 
 
@@ -1139,9 +1281,9 @@ body {
 
     .batch {
 
-        font-size: 0.78rem;
+        font-size: 0.76rem;
 
-        letter-spacing: 2.5px;
+        letter-spacing: 2px;
     }
 
 
@@ -1151,31 +1293,57 @@ body {
 
     .tagline {
 
-        font-size: 0.58rem;
+        font-size: 0.56rem;
 
-        letter-spacing: 2px;
+        letter-spacing: 1.7px;
     }
 
 
     /* ==================================================
-       TITLE
+       CULTURAL
        ================================================== */
 
     .main-title {
 
-        font-size: 2.5rem;
+        font-size: 2.45rem;
+
+        line-height: 0.9;
     }
 
 
     /* ==================================================
-       TITLE DECORATION
+       DAY ROW
+       ================================================== */
+
+    .day-title {
+
+        gap: 5px;
+
+        margin-top: 6px;
+    }
+
+
+    /* ==================================================
+       〰
        ================================================== */
 
     .title-decoration {
 
-        width: 28px;
+        font-size: 0.82rem;
 
-        font-size: 1rem;
+        transform: translateY(-1px);
+    }
+
+
+    /* ==================================================
+       DAY
+       ================================================== */
+
+    .day-text {
+
+        font-size: 2.3rem;
+
+        line-height: 0.9;
     }
 
 
@@ -1185,7 +1353,7 @@ body {
 
     .message h2 {
 
-        font-size: 1.2rem;
+        font-size: 1.18rem;
     }
 
 
@@ -1195,37 +1363,41 @@ body {
 
     .message p {
 
-        font-size: 0.9rem;
+        font-size: 0.88rem;
+
+        line-height: 1.75;
     }
 
 
     /* ==================================================
-       EVENT ITEM
+       EVENT BOX
        ================================================== */
 
     .event-item {
 
-        min-height: 175px;
-
-        padding: 23px 14px;
+        padding: 23px 12px 25px;
     }
 
 
     /* ==================================================
-       EVENT ICON
+       EVENT SVG
        ================================================== */
 
     .event-icon {
 
-        width: 48px;
+        width: 40px;
 
-        height: 48px;
+        height: 40px;
 
-        min-width: 48px;
+        min-width: 40px;
 
-        min-height: 48px;
+        min-height: 40px;
 
-        margin-bottom: 16px;
+        max-width: 40px;
+
+        max-height: 40px;
+
+        margin-bottom: 15px;
     }
 
 
@@ -1235,9 +1407,9 @@ body {
 
     .event-item h2 {
 
-        font-size: 1rem;
+        font-size: 0.96rem;
 
-        letter-spacing: 2.5px;
+        letter-spacing: 2.2px;
     }
 
 
@@ -1247,17 +1419,21 @@ body {
 
     .event-item p {
 
-        font-size: 0.94rem;
+        font-size: 0.9rem;
+
+        line-height: 1.5;
     }
 
 
     /* ==================================================
-       VENUE TEXT
+       VENUE
        ================================================== */
 
     .event-item:nth-child(3) p {
 
-        font-size: 0.9rem;
+        font-size: 0.86rem;
+
+        line-height: 1.5;
     }
 
 
@@ -1267,9 +1443,9 @@ body {
 
     .copyright {
 
-        font-size: 0.76rem;
+        font-size: 0.72rem;
 
-        letter-spacing: 1.5px;
+        letter-spacing: 1.3px;
     }
 
 
@@ -1279,7 +1455,6 @@ body {
 
     .footer-description {
 
-        font-size: 0.7rem;
+        font-size: 0.68rem;
     }
-
 }
