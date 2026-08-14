@@ -10,132 +10,75 @@
 
 
 /* ==================================================
-   BODY / COSMIC BACKGROUND
+   BODY / CELESTIAL BACKGROUND
    ================================================== */
 
 body {
-
     min-height: 100vh;
-
-    position: relative;
-
-    overflow-x: hidden;
 
     background:
 
         /* Tiny stars */
-        radial-gradient(circle at 8% 12%,
-            #f4d58a 0 1px,
-            transparent 2px),
+        radial-gradient(circle at 8% 12%, #f4d58a 0 1px, transparent 2px),
+        radial-gradient(circle at 18% 35%, #f4d58a 0 1px, transparent 2px),
+        radial-gradient(circle at 32% 10%, #f4d58a 0 1px, transparent 2px),
+        radial-gradient(circle at 48% 24%, #f4d58a 0 1px, transparent 2px),
+        radial-gradient(circle at 63% 8%, #f4d58a 0 1px, transparent 2px),
+        radial-gradient(circle at 78% 30%, #f4d58a 0 1px, transparent 2px),
+        radial-gradient(circle at 91% 15%, #f4d58a 0 1px, transparent 2px),
 
-        radial-gradient(circle at 18% 35%,
-            #f4d58a 0 1px,
-            transparent 2px),
+        /* Larger glowing stars */
+        radial-gradient(circle at 25% 18%, #f4d58a 0 2px, transparent 3px),
+        radial-gradient(circle at 70% 18%, #f4d58a 0 2px, transparent 3px),
+        radial-gradient(circle at 88% 45%, #f4d58a 0 2px, transparent 3px),
 
-        radial-gradient(circle at 32% 10%,
-            #f4d58a 0 1px,
-            transparent 2px),
+        /* Existing cosmic glow */
+        radial-gradient(circle at 20% 20%, #172b50 0%, transparent 25%),
+        radial-gradient(circle at 80% 70%, #321b35 0%, transparent 30%),
 
-        radial-gradient(circle at 48% 24%,
-            #f4d58a 0 1px,
-            transparent 2px),
-
-        radial-gradient(circle at 63% 8%,
-            #f4d58a 0 1px,
-            transparent 2px),
-
-        radial-gradient(circle at 78% 30%,
-            #f4d58a 0 1px,
-            transparent 2px),
-
-        radial-gradient(circle at 91% 15%,
-            #f4d58a 0 1px,
-            transparent 2px),
-
-
-        /* Larger stars */
-
-        radial-gradient(circle at 25% 18%,
-            #f4d58a 0 2px,
-            transparent 3px),
-
-        radial-gradient(circle at 70% 18%,
-            #f4d58a 0 2px,
-            transparent 3px),
-
-        radial-gradient(circle at 88% 45%,
-            #f4d58a 0 2px,
-            transparent 3px),
-
-
-        /* Cosmic glow */
-
-        radial-gradient(circle at 20% 20%,
-            #172b50 0%,
-            transparent 25%),
-
-        radial-gradient(circle at 80% 70%,
-            #321b35 0%,
-            transparent 30%),
-
-
-        /* Main navy */
-
+        /* Main navy background */
         #07152b;
 }
 
 
-
 /* ==================================================
-   CELESTIAL DECORATIONS
+   SATURN DECORATION
    ================================================== */
 
-
-/* ------------------------------
-   SATURN
-   ------------------------------ */
-
 .saturn {
-
     position: absolute;
-
     width: 220px;
-
-    height: auto;
-
     top: 55px;
-
     left: 70px;
-
     z-index: 0;
-
-    pointer-events: none;
 }
 
 
-/* ------------------------------
-   CRESCENT MOON
-   ------------------------------ */
+/* ==================================================
+   CRESCENT MOON DECORATION
+   ================================================== */
 
 .moon {
-
     position: absolute;
-
     width: 130px;
-
-    height: auto;
-
     top: 60px;
-
     right: 70px;
-
     z-index: 0;
-
-    pointer-events: none;
-
     filter: sepia(1) saturate(1.5);
 }
 
+
+/* ==================================================
+   TITLE WRAPPER
+   ================================================== */
+
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin: 35px 0 20px;
+}
 
 
 /* ==================================================
@@ -143,29 +86,21 @@ body {
    ================================================== */
 
 .invitation {
-
     width: min(90%, 900px);
-
     min-height: 100vh;
-
     margin: 40px auto;
-
     padding: 50px;
 
     position: relative;
-
     z-index: 1;
 
     background: #f7f0df;
 
     border: 2px solid #b28a4a;
-
     border-radius: 30px;
 
-    box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
 }
-
 
 
 /* ==================================================
@@ -173,19 +108,14 @@ body {
    ================================================== */
 
 .invitation-header {
-
     text-align: center;
 }
 
 
-/* ------------------------------
-   DCC LOGO
-   ------------------------------ */
+/* DCC Logo */
 
 .invitation-header img {
-
     width: 120px;
-
     height: auto;
 
     display: block;
@@ -194,37 +124,27 @@ body {
 }
 
 
-/* ------------------------------
-   BATCH NAME
-   ------------------------------ */
+/* Batch name */
 
 .batch {
-
     font-size: 1.1rem;
-
     font-weight: 700;
-
     letter-spacing: 3px;
 
     color: #7b2430;
 }
 
 
-/* ------------------------------
-   TAGLINE
-   ------------------------------ */
+/* Small tagline */
 
 .tagline {
-
     margin-top: 10px;
 
     font-size: 0.8rem;
-
     letter-spacing: 4px;
 
     color: #8a6a38;
 }
-
 
 
 /* ==================================================
@@ -233,9 +153,12 @@ body {
 
 .main-title {
     text-align: center;
+
     font-size: 5rem;
     font-weight: 700;
+
     line-height: 0.95;
+
     margin: 35px 0 25px;
 }
 
@@ -246,6 +169,7 @@ body {
 
 .main-title span:first-child {
     display: block;
+
     color: #071e49;
 }
 
@@ -256,8 +180,11 @@ body {
 
 .main-title span:last-child {
     display: block;
+
     position: relative;
+
     color: #7b2430;
+
     margin-top: 5px;
 }
 
@@ -269,11 +196,16 @@ body {
 .main-title span:last-child::before,
 .main-title span:last-child::after {
     content: "〰";
+
     position: absolute;
+
     top: 50%;
+
     transform: translateY(-50%);
+
     font-size: 2.2rem;
     font-weight: 400;
+
     color: #b28a4a;
 }
 
@@ -291,66 +223,45 @@ body {
     left: calc(50% + 150px);
 }
 
-/* ------------------------------
-   CULTURAL
-   ------------------------------ */
-
-.main-title span:first-child {
-
-    color: #071e49;
-}
-
-
-/* ------------------------------
-   DAY
-   ------------------------------ */
-
-.main-title span:last-child {
-
-    color: #7b2430;
-}
-
-
 
 /* ==================================================
    QUOTE
    ================================================== */
 
 .quote {
+    max-width: 620px;
+
+    margin: 25px auto 0;
+
+    padding: 0 15px;
 
     text-align: center;
 
-    margin: 20px 0;
-
     font-size: 1.15rem;
+    line-height: 1.6;
 
     font-style: italic;
-
-    line-height: 1.5;
 
     color: #5f513e;
 }
 
 
-/* ------------------------------
-   DECORATIVE LINE
-   ------------------------------ */
+/* --------------------------------------------------
+   DECORATIVE GOLD LINE ABOVE QUOTE
+   -------------------------------------------------- */
 
 .quote::before {
-
     content: "";
 
     display: block;
 
-    width: 60px;
-
+    width: 65px;
     height: 2px;
 
+    margin: 0 auto 15px;
+
     background: #b28a4a;
-
-    margin: 0 auto 12px;
 }
-
 
 
 /* ==================================================
@@ -358,7 +269,6 @@ body {
    ================================================== */
 
 .message {
-
     max-width: 650px;
 
     margin: 45px auto 0;
@@ -369,42 +279,31 @@ body {
 }
 
 
-/* ------------------------------
-   GREETING
-   ------------------------------ */
+/* Greeting */
 
 .message h2 {
-
     margin-bottom: 20px;
 
     font-size: 2rem;
-
     font-weight: 600;
 
     color: #7b2430;
 }
 
 
-/* ------------------------------
-   MESSAGE PARAGRAPHS
-   ------------------------------ */
+/* Message paragraphs */
 
 .message p {
-
     font-size: 1.04rem;
-
     line-height: 1.5;
 
     margin-bottom: 8px;
 }
 
 
-/* ------------------------------
-   DECORATIVE STAR
-   ------------------------------ */
+/* Decorative symbol */
 
 .message::before {
-
     content: "✦";
 
     display: block;
@@ -417,17 +316,14 @@ body {
 }
 
 
-
 /* ==================================================
    EVENT DETAILS
    ================================================== */
 
 .event-details {
-
     display: flex;
 
     justify-content: space-between;
-
     align-items: stretch;
 
     gap: 20px;
@@ -436,13 +332,9 @@ body {
 }
 
 
-
-/* ==================================================
-   INDIVIDUAL EVENT CARD
-   ================================================== */
+/* Individual event box */
 
 .event-item {
-
     flex: 1;
 
     padding: 25px 15px;
@@ -450,85 +342,61 @@ body {
     text-align: center;
 
     border: 1px solid #b28a4a;
-
     border-radius: 15px;
 
-    background:
-        rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.35);
 }
 
 
-
-/* ------------------------------
-   EVENT ICON
-   ------------------------------ */
-
-.event-icon {
-
-    font-size: 2rem;
-
-    margin-bottom: 10px;
-}
-
-
-
-/* ------------------------------
-   EVENT LABEL
-   ------------------------------ */
+/* Event labels */
 
 .event-item h2 {
-
     margin-bottom: 10px;
 
     font-size: 0.9rem;
 
     text-transform: uppercase;
-
     letter-spacing: 3px;
 
     color: #6b232d;
 }
 
 
-
-/* ------------------------------
-   MAIN EVENT INFORMATION
-   ------------------------------ */
+/* Main event information */
 
 .event-item p {
-
     margin-bottom: 8px;
 
     font-size: 1.04rem;
-
     font-weight: 700;
-
-    line-height: 1.4;
 
     color: #061d47;
 }
 
 
-
-/* ------------------------------
-   SECONDARY INFORMATION
-   ------------------------------ */
+/* Secondary information */
 
 .event-item span {
-
     font-size: 0.9rem;
 
     color: #3f2806;
 }
 
 
+/* Venue needs a little more room */
+
+.event-item:nth-child(3) p {
+    font-size: 1.04rem;
+
+    line-height: 1.4;
+}
+
 
 /* ==================================================
-   INVITATION FOOTER
+   COSMIC FOOTER
    ================================================== */
 
-.invitation-footer {
-
+.cosmic-footer {
     margin-top: 50px;
 
     padding-top: 25px;
@@ -541,16 +409,14 @@ body {
 }
 
 
-
-/* ------------------------------
+/* --------------------------------------------------
    CLOSING MESSAGE
-   ------------------------------ */
+   -------------------------------------------------- */
 
 .closing-message {
+    margin-bottom: 25px;
 
-    margin-bottom: 20px;
-
-    font-size: 1.15rem;
+    font-size: 1.03rem;
 
     font-style: italic;
 
@@ -558,52 +424,43 @@ body {
 }
 
 
-
-/* ------------------------------
+/* --------------------------------------------------
    CODE SYMBOL
-   ------------------------------ */
+   -------------------------------------------------- */
 
 .code-symbol {
+    margin-bottom: 15px;
 
-    margin: 15px 0;
-
-    font-size: 2rem;
-
+    font-size: 1.8rem;
     font-weight: 700;
 
     color: #b28a4a;
 }
 
 
-
-/* ------------------------------
+/* --------------------------------------------------
    COPYRIGHT
-   ------------------------------ */
+   -------------------------------------------------- */
 
 .copyright {
-
     margin-bottom: 8px;
 
     font-size: 0.7rem;
-
     font-weight: 700;
 
     color: #071e49;
 }
 
 
-
-/* ------------------------------
+/* --------------------------------------------------
    FOOTER DESCRIPTION
-   ------------------------------ */
+   -------------------------------------------------- */
 
 .footer-description {
-
     font-size: 0.83rem;
 
     color: #8a6a38;
 }
-
 
 
 /* ==================================================
@@ -618,14 +475,11 @@ body {
        ---------------------------------------------- */
 
     .saturn {
-
-        width: 85px;
+        width: 100px;
 
         top: 25px;
-
         left: 15px;
     }
-
 
 
     /* ----------------------------------------------
@@ -633,14 +487,11 @@ body {
        ---------------------------------------------- */
 
     .moon {
-
-        width: 65px;
+        width: 70px;
 
         top: 35px;
-
         right: 20px;
     }
-
 
 
     /* ----------------------------------------------
@@ -648,18 +499,14 @@ body {
        ---------------------------------------------- */
 
     .invitation {
-
         width: 94%;
-
-        min-height: auto;
-
-        margin: 20px auto;
 
         padding: 25px;
 
+        margin: 20px auto;
+
         border-radius: 20px;
     }
-
 
 
     /* ----------------------------------------------
@@ -667,10 +514,8 @@ body {
        ---------------------------------------------- */
 
     .invitation-header img {
-
         width: 90px;
     }
-
 
 
     /* ----------------------------------------------
@@ -678,12 +523,10 @@ body {
        ---------------------------------------------- */
 
     .batch {
-
         font-size: 0.9rem;
 
         letter-spacing: 2px;
     }
-
 
 
     /* ----------------------------------------------
@@ -691,12 +534,10 @@ body {
        ---------------------------------------------- */
 
     .tagline {
-
         font-size: 0.65rem;
 
         letter-spacing: 2px;
     }
-
 
 
     /* ----------------------------------------------
@@ -704,14 +545,32 @@ body {
        ---------------------------------------------- */
 
     .main-title {
-
         font-size: 3rem;
 
         line-height: 0.95;
 
-        margin: 25px 0 15px;
+        margin: 25px 0 20px;
     }
 
+
+    /* Smaller decorative flourishes on mobile */
+
+    .main-title span:last-child::before,
+    .main-title span:last-child::after {
+        font-size: 1.4rem;
+    }
+
+
+    /* Position mobile flourishes */
+
+    .main-title span:last-child::before {
+        right: calc(50% + 90px);
+    }
+
+
+    .main-title span:last-child::after {
+        left: calc(50% + 90px);
+    }
 
 
     /* ----------------------------------------------
@@ -719,14 +578,25 @@ body {
        ---------------------------------------------- */
 
     .quote {
+        max-width: 100%;
+
+        padding: 0 5px;
 
         font-size: 0.95rem;
 
         line-height: 1.5;
 
-        margin: 15px 0;
+        margin: 20px auto 0;
     }
 
+
+    /* Smaller decorative line on mobile */
+
+    .quote::before {
+        width: 50px;
+
+        margin-bottom: 10px;
+    }
 
 
     /* ----------------------------------------------
@@ -734,28 +604,20 @@ body {
        ---------------------------------------------- */
 
     .message {
-
         margin-top: 30px;
     }
 
 
-
     .message h2 {
-
         font-size: 1.1rem;
-
-        line-height: 1.4;
     }
 
 
-
     .message p {
-
         font-size: 0.9rem;
 
         line-height: 1.7;
     }
-
 
 
     /* ----------------------------------------------
@@ -763,7 +625,6 @@ body {
        ---------------------------------------------- */
 
     .event-details {
-
         flex-direction: column;
 
         gap: 15px;
@@ -772,81 +633,42 @@ body {
     }
 
 
-
     /* ----------------------------------------------
-       EVENT CARD — MOBILE
+       COSMIC FOOTER — MOBILE
        ---------------------------------------------- */
 
-    .event-item {
-
-        padding: 22px 15px;
-    }
-
-
-
-    /* ----------------------------------------------
-       EVENT ICON — MOBILE
-       ---------------------------------------------- */
-
-    .event-icon {
-
-        font-size: 1.7rem;
-    }
-
-
-
-    /* ----------------------------------------------
-       EVENT TEXT — MOBILE
-       ---------------------------------------------- */
-
-    .event-item p {
-
-        font-size: 0.95rem;
-    }
-
-
-
-    .event-item span {
-
-        font-size: 0.8rem;
-    }
-
-
-
-    /* ----------------------------------------------
-       FOOTER — MOBILE
-       ---------------------------------------------- */
-
-    .invitation-footer {
-
+    .cosmic-footer {
         margin-top: 35px;
 
         padding-top: 20px;
     }
 
 
-
     .closing-message {
+        margin-bottom: 20px;
 
-        font-size: 0.95rem;
+        font-size: 0.9rem;
 
-        line-height: 1.5;
+        line-height: 1.4;
     }
-
 
 
     .code-symbol {
+        margin-bottom: 12px;
 
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
 
 
+    .copyright {
+        font-size: 0.65rem;
+    }
+
 
     .footer-description {
-
         font-size: 0.75rem;
 
-        line-height: 1.5;
+        line-height: 1.4;
     }
 
 }
