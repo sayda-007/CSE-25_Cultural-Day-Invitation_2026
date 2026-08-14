@@ -24,7 +24,7 @@
 }
 
 /* ==========================================================================
-   2. GLOBAL RESET & STARRY NIGHT BACKGROUND
+   2. GLOBAL RESET & STARRY NIGHT BACKGROUND WITH ENHANCED TINY DOT SPARKLES
    ========================================================================== */
 *,
 *::before,
@@ -42,20 +42,9 @@ body {
 
 body {
     background-color: var(--bg-space-dark);
-    /* Layered star field dots & radial space glow */
+    /* Base space ambient glow */
     background-image:
-        radial-gradient(ellipse at 50% 15%, var(--bg-space-glow) 0%, rgba(3, 6, 17, 0.95) 70%),
-        radial-gradient(2px 2px at 12% 15%, #ffffff, rgba(0, 0, 0, 0)),
-        radial-gradient(2.5px 2.5px at 28% 42%, rgba(255, 235, 170, 0.95), rgba(0, 0, 0, 0)),
-        radial-gradient(1.5px 1.5px at 45% 12%, #ffffff, rgba(0, 0, 0, 0)),
-        radial-gradient(2px 2px at 68% 22%, rgba(255, 235, 170, 0.85), rgba(0, 0, 0, 0)),
-        radial-gradient(2px 2px at 85% 50%, #ffffff, rgba(0, 0, 0, 0)),
-        radial-gradient(2.5px 2.5px at 94% 80%, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0)),
-        radial-gradient(1.5px 1.5px at 8% 75%, #ffffff, rgba(0, 0, 0, 0)),
-        radial-gradient(2px 2px at 38% 88%, rgba(230, 203, 139, 0.9), rgba(0, 0, 0, 0)),
-        radial-gradient(1.5px 1.5px at 62% 65%, #ffffff, rgba(0, 0, 0, 0));
-    background-size: 100% 100%, 280px 280px, 350px 350px, 200px 200px, 310px 310px, 240px 240px, 380px 380px, 260px 260px, 330px 330px, 290px 290px;
-    background-repeat: no-repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat;
+        radial-gradient(ellipse at 50% 15%, var(--bg-space-glow) 0%, rgba(3, 6, 17, 0.95) 70%);
     font-family: var(--font-serif-body);
     display: flex;
     justify-content: center;
@@ -63,7 +52,78 @@ body {
     padding: 50px 20px;
     color: var(--navy-text);
     overflow-x: hidden;
+    position: relative;
     -webkit-font-smoothing: antialiased;
+}
+
+/* Primary Layer: Clear, Noticeable Tiny Dot Sparkles */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+    background-image:
+        radial-gradient(2px 2px at 8% 12%, #ffffff, rgba(0, 0, 0, 0)),
+        radial-gradient(2.5px 2.5px at 18% 45%, #ffe49e, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 28% 82%, #ffffff, rgba(0, 0, 0, 0)),
+        radial-gradient(2.5px 2.5px at 38% 22%, #ffd778, rgba(0, 0, 0, 0)),
+        radial-gradient(3px 3px at 48% 68%, #ffffff, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 58% 15%, #ffe49e, rgba(0, 0, 0, 0)),
+        radial-gradient(2.5px 2.5px at 68% 88%, #ffffff, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 78% 35%, #ffd778, rgba(0, 0, 0, 0)),
+        radial-gradient(2.5px 2.5px at 88% 72%, #ffffff, rgba(0, 0, 0, 0)),
+        radial-gradient(3px 3px at 94% 18%, #ffe49e, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 12% 92%, #ffffff, rgba(0, 0, 0, 0)),
+        radial-gradient(2.5px 2.5px at 82% 95%, #ffd778, rgba(0, 0, 0, 0));
+    background-size: 100% 100%;
+    animation: tinySparkleTwinkle 3s ease-in-out infinite alternate;
+}
+
+/* Secondary Layer: Offset Dot Field for Extra Depth & Glow */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+    background-image:
+        radial-gradient(2px 2px at 5% 65%, #ffffff, rgba(0, 0, 0, 0)),
+        radial-gradient(2.5px 2.5px at 15% 25%, #ffd778, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 25% 90%, #ffffff, rgba(0, 0, 0, 0)),
+        radial-gradient(2.5px 2.5px at 35% 50%, #ffe49e, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 45% 10%, #ffffff, rgba(0, 0, 0, 0)),
+        radial-gradient(2.5px 2.5px at 55% 80%, #ffd778, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 65% 30%, #ffffff, rgba(0, 0, 0, 0)),
+        radial-gradient(2.5px 2.5px at 75% 60%, #ffe49e, rgba(0, 0, 0, 0)),
+        radial-gradient(2px 2px at 85% 15%, #ffffff, rgba(0, 0, 0, 0)),
+        radial-gradient(2.5px 2.5px at 95% 52%, #ffd778, rgba(0, 0, 0, 0));
+    background-size: 100% 100%;
+    animation: tinySparkleTwinkle 4.2s ease-in-out infinite alternate 1.5s;
+}
+
+@keyframes tinySparkleTwinkle {
+    0% {
+        opacity: 0.45;
+        transform: scale(0.98);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.02);
+        filter: drop-shadow(0 0 3px rgba(255, 230, 150, 0.85));
+    }
+
+    100% {
+        opacity: 0.65;
+        transform: scale(1);
+    }
 }
 
 .wrapper {
@@ -76,7 +136,7 @@ body {
 }
 
 /* ==========================================================================
-   3. STRICTLY CONSTRAINED CELESTIAL ACCENTS
+   3. TINY & GLOWING CELESTIAL ACCENTS
    ========================================================================== */
 .celestial {
     position: absolute;
@@ -86,31 +146,31 @@ body {
     display: block;
 }
 
-.celestial svg {
-    width: 100% !important;
-    height: 100% !important;
-    max-width: 100% !important;
-    max-height: 100% !important;
+.celestial-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     display: block;
 }
 
+/* Saturn: Moved further left to prevent overlapping the card */
 .celestial.saturn {
-    top: -12px;
-    left: -15px;
-    width: 28px !important;
-    height: 28px !important;
-    filter: drop-shadow(0 0 5px rgba(203, 163, 88, 0.7));
-    opacity: 0.9;
+    top: 33%;
+    left: -55px;
+    width: 32px;
+    height: 32px;
+    filter: drop-shadow(0 0 6px #e6cb8b) drop-shadow(0 0 12px rgba(203, 163, 88, 0.8));
+    opacity: 0.95;
 }
 
+/* Moon: Right Top Side */
 .celestial.moon {
-    top: 5px;
-    right: -10px;
-    width: 15px !important;
-    height: 15px !important;
-    filter: drop-shadow(0 0 5px rgba(230, 203, 139, 0.8));
+    top: 10px;
+    right: -15px;
+    width: 22px;
+    height: 22px;
+    filter: drop-shadow(0 0 6px #ffffff) drop-shadow(0 0 12px rgba(230, 203, 139, 0.9));
     opacity: 0.95;
-    transform: rotate(-10deg);
 }
 
 /* ==========================================================================
@@ -475,17 +535,17 @@ body {
     }
 
     .celestial.saturn {
-        left: 0px;
-        top: -5px;
-        width: 20px !important;
-        height: 20px !important;
+        left: -30px;
+        top: 33%;
+        width: 24px;
+        height: 24px;
     }
 
     .celestial.moon {
-        right: 0px;
-        top: 0px;
-        width: 10px !important;
-        height: 10px !important;
+        right: -8px;
+        top: 5px;
+        width: 18px;
+        height: 18px;
     }
 
     .sp-1,
