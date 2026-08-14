@@ -1,5 +1,5 @@
 /* ==================================================
-   RESET DEFAULT BROWSER STYLES
+   RESET
    ================================================== */
 
 * {
@@ -14,7 +14,8 @@
    ================================================== */
 
 html {
-    scroll-behavior: smooth;
+    width: 100%;
+    min-height: 100%;
 }
 
 
@@ -24,6 +25,7 @@ html {
 
 body {
 
+    width: 100%;
     min-height: 100vh;
 
     position: relative;
@@ -32,9 +34,7 @@ body {
 
     background:
 
-        /* ==================================================
-           SMALL STARS
-           ================================================== */
+        /* Small stars */
 
         radial-gradient(circle at 7% 10%,
             #f4d58a 0 1px,
@@ -125,9 +125,7 @@ body {
             transparent 2px),
 
 
-        /* ==================================================
-           BRIGHTER STARS
-           ================================================== */
+        /* Bright stars */
 
         radial-gradient(circle at 22% 15%,
             #ffe7a6 0 1.5px,
@@ -150,39 +148,33 @@ body {
             transparent 3px),
 
 
-        /* ==================================================
-           COSMIC GLOW
-           ================================================== */
+        /* Cosmic glow */
 
         radial-gradient(ellipse at 15% 25%,
-            rgba(30, 62, 115, 0.55) 0%,
-            rgba(20, 45, 90, 0.25) 25%,
+            rgba(30, 62, 115, 0.55),
             transparent 55%),
 
         radial-gradient(ellipse at 85% 25%,
-            rgba(52, 35, 82, 0.5) 0%,
-            rgba(42, 30, 70, 0.2) 28%,
+            rgba(52, 35, 82, 0.5),
             transparent 58%),
 
         radial-gradient(ellipse at 50% 85%,
-            rgba(25, 45, 90, 0.35) 0%,
+            rgba(25, 45, 90, 0.35),
             transparent 55%),
 
 
-        /* ==================================================
-           MAIN NAVY BACKGROUND
-           ================================================== */
+        /* Main background */
 
         linear-gradient(135deg,
             #030b1c 0%,
-            #07152b 35%,
-            #091a34 65%,
+            #07152b 40%,
+            #091a34 70%,
             #040c20 100%);
 }
 
 
 /* ==================================================
-   SATURN DECORATION
+   SATURN
    ================================================== */
 
 .saturn {
@@ -192,19 +184,16 @@ body {
     width: 82px;
 
     top: 35px;
-
     left: 45px;
 
     z-index: 0;
 
     pointer-events: none;
-
-    user-select: none;
 }
 
 
 /* ==================================================
-   CRESCENT MOON DECORATION
+   MOON
    ================================================== */
 
 .moon {
@@ -214,14 +203,11 @@ body {
     width: 54px;
 
     top: 42px;
-
     right: 50px;
 
     z-index: 0;
 
     pointer-events: none;
-
-    user-select: none;
 
     filter: sepia(1) saturate(1.5);
 }
@@ -255,7 +241,7 @@ body {
 
 
 /* ==================================================
-   INVITATION HEADER
+   HEADER
    ================================================== */
 
 .invitation-header {
@@ -384,12 +370,10 @@ body {
 
 
 /* ==================================================
-   〰 BESIDE DAY
+   GOLD 〰
    ================================================== */
 
 .title-decoration {
-
-    display: block;
 
     font-family:
         Georgia,
@@ -457,10 +441,6 @@ body {
 }
 
 
-/* ==================================================
-   QUOTE DECORATIVE LINE
-   ================================================== */
-
 .quote::before {
 
     content: "";
@@ -478,7 +458,7 @@ body {
 
 
 /* ==================================================
-   INVITATION MESSAGE
+   MESSAGE
    ================================================== */
 
 .message {
@@ -488,14 +468,8 @@ body {
     margin: 55px auto 0;
 
     text-align: center;
-
-    color: #40382e;
 }
 
-
-/* ==================================================
-   MESSAGE HEADING
-   ================================================== */
 
 .message h2 {
 
@@ -510,15 +484,9 @@ body {
 
     line-height: 1.3;
 
-    font-weight: 700;
-
     color: #7b2430;
 }
 
-
-/* ==================================================
-   MESSAGE PARAGRAPHS
-   ================================================== */
 
 .message p {
 
@@ -545,20 +513,16 @@ body {
 
     display: flex;
 
-    justify-content: space-between;
-
-    align-items: stretch;
-
     gap: 15px;
 
-    margin-top: 45px;
-
     width: 100%;
+
+    margin-top: 45px;
 }
 
 
 /* ==================================================
-   EVENT ITEM
+   EVENT BOX
    ================================================== */
 
 .event-item {
@@ -575,15 +539,12 @@ body {
 
     border-radius: 15px;
 
-    background:
-        rgba(255, 255, 255, 0.25);
-
-    overflow: hidden;
+    background: rgba(255, 255, 255, 0.25);
 }
 
 
 /* ==================================================
-   EVENT SVG ICONS
+   EVENT SVG
    ================================================== */
 
 .event-icon {
@@ -591,34 +552,21 @@ body {
     display: block;
 
     width: 42px;
-
     height: 42px;
 
-    min-width: 42px;
-
-    min-height: 42px;
-
-    max-width: 42px;
-
-    max-height: 42px;
-
-    margin: 0 auto 17px;
+    margin: 0 auto 18px;
 
     object-fit: contain;
-
-    object-position: center;
-
-    flex: 0 0 auto;
 }
 
 
 /* ==================================================
-   EVENT LABEL
+   EVENT TITLE
    ================================================== */
 
 .event-item h2 {
 
-    margin: 0 0 12px;
+    margin-bottom: 12px;
 
     font-family:
         "Trebuchet MS",
@@ -627,12 +575,6 @@ body {
 
     font-size: 1.05rem;
 
-    line-height: 1.2;
-
-    font-weight: 700;
-
-    text-transform: uppercase;
-
     letter-spacing: 3px;
 
     color: #6b232d;
@@ -640,12 +582,12 @@ body {
 
 
 /* ==================================================
-   EVENT MAIN INFORMATION
+   EVENT MAIN TEXT
    ================================================== */
 
 .event-item p {
 
-    margin: 0 0 8px;
+    margin-bottom: 8px;
 
     font-family:
         "Trebuchet MS",
@@ -665,7 +607,7 @@ body {
 
 
 /* ==================================================
-   EVENT SECONDARY INFORMATION
+   EVENT SECONDARY TEXT
    ================================================== */
 
 .event-item span {
@@ -703,20 +645,18 @@ body {
 
 .cosmic-footer {
 
-    margin-top: 55px;
+    width: 100%;
+
+    margin-top: 60px;
 
     padding-top: 25px;
 
     text-align: center;
-
-    position: relative;
-
-    color: #5f513e;
 }
 
 
 /* ==================================================
-   FOOTER LINE
+   FOOTER GOLD LINE
    ================================================== */
 
 .footer-line {
@@ -725,9 +665,9 @@ body {
 
     height: 1px;
 
-    background: #b28a4a;
+    margin-bottom: 28px;
 
-    margin-bottom: 25px;
+    background: #b28a4a;
 }
 
 
@@ -737,14 +677,14 @@ body {
 
 .closing-message {
 
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 1.15rem;
+    font-size: 1.12rem;
 
     line-height: 1.5;
 
@@ -760,15 +700,17 @@ body {
 
 .code-symbol {
 
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 
     font-family:
         "Courier New",
         monospace;
 
-    font-size: 1.7rem;
+    font-size: 1.65rem;
 
     font-weight: 700;
+
+    letter-spacing: 1px;
 
     color: #b28a4a;
 }
@@ -783,15 +725,15 @@ body {
     margin-bottom: 12px;
 
     font-family:
-        "Trebuchet MS",
-        Arial,
-        sans-serif;
+        Georgia,
+        "Times New Roman",
+        serif;
 
-    font-size: 0.9rem;
+    font-size: 1rem;
 
     font-weight: 700;
 
-    letter-spacing: 2.5px;
+    letter-spacing: 2px;
 
     color: #071e49;
 }
@@ -804,29 +746,27 @@ body {
 .footer-description {
 
     font-family:
-        "Trebuchet MS",
-        Arial,
-        sans-serif;
+        Georgia,
+        "Times New Roman",
+        serif;
 
-    font-size: 0.88rem;
+    font-size: 0.82rem;
 
-    line-height: 1.6;
-
-    letter-spacing: 0.5px;
+    line-height: 1.5;
 
     color: #8a6a38;
 }
 
 
 /* ==================================================
-   MOBILE RESPONSIVE DESIGN
+   MOBILE
    ================================================== */
 
 @media (max-width: 600px) {
 
 
     /* ==================================================
-       SATURN
+       COSMIC DECORATIONS
        ================================================== */
 
     .saturn {
@@ -835,19 +775,15 @@ body {
 
         top: 22px;
 
-        left: 8px;
+        left: 10px;
     }
 
 
-    /* ==================================================
-       MOON
-       ================================================== */
-
     .moon {
 
-        width: 48px;
+        width: 44px;
 
-        top: 27px;
+        top: 28px;
 
         right: 10px;
     }
@@ -861,7 +797,7 @@ body {
 
         width: calc(100% - 28px);
 
-        margin: 115px auto 40px;
+        margin: 105px auto 35px;
 
         padding: 30px 18px;
 
@@ -875,9 +811,9 @@ body {
 
     .invitation-header img {
 
-        width: 90px;
+        width: 88px;
 
-        margin-bottom: 18px;
+        margin-bottom: 17px;
     }
 
 
@@ -887,9 +823,9 @@ body {
 
     .batch {
 
-        font-size: 0.82rem;
+        font-size: 0.8rem;
 
-        letter-spacing: 2.5px;
+        letter-spacing: 2px;
     }
 
 
@@ -899,71 +835,47 @@ body {
 
     .tagline {
 
-        margin-top: 10px;
+        font-size: 0.6rem;
 
-        font-size: 0.62rem;
-
-        letter-spacing: 2px;
+        letter-spacing: 1.8px;
     }
 
 
     /* ==================================================
-       TITLE WRAPPER
+       TITLE
        ================================================== */
 
     .title-wrapper {
 
-        margin: 35px 0 18px;
+        margin: 35px 0 20px;
     }
 
 
-    /* ==================================================
-       CULTURAL — MOBILE
-       ================================================== */
-
     .main-title {
 
-        font-size:
-            clamp(2.65rem, 12vw, 4rem);
+        font-size: 2.7rem;
 
         line-height: 0.9;
     }
 
 
-    /* ==================================================
-       DAY ROW — MOBILE
-       ================================================== */
-
     .day-title {
 
         gap: 7px;
 
-        margin-top: 7px;
-
-        width: 100%;
+        margin-top: 8px;
     }
 
-
-    /* ==================================================
-       〰 — MOBILE
-       ================================================== */
 
     .title-decoration {
 
         font-size: 1rem;
-
-        transform: translateY(-1px);
     }
 
 
-    /* ==================================================
-       DAY — MOBILE
-       ================================================== */
-
     .day-text {
 
-        font-size:
-            clamp(2.35rem, 11vw, 3.6rem);
+        font-size: 2.45rem;
 
         line-height: 0.9;
     }
@@ -977,19 +889,11 @@ body {
 
         margin-top: 22px;
 
-        padding: 0 4px;
+        padding: 0 5px;
 
-        font-size: 0.92rem;
+        font-size: 0.9rem;
 
         line-height: 1.65;
-    }
-
-
-    .quote::before {
-
-        width: 55px;
-
-        margin-bottom: 15px;
     }
 
 
@@ -999,15 +903,15 @@ body {
 
     .message {
 
-        margin-top: 45px;
+        margin-top: 42px;
     }
 
 
     .message h2 {
 
-        margin-bottom: 22px;
+        margin-bottom: 20px;
 
-        font-size: 1.3rem;
+        font-size: 1.25rem;
 
         line-height: 1.4;
     }
@@ -1015,9 +919,7 @@ body {
 
     .message p {
 
-        margin-bottom: 12px;
-
-        font-size: 0.95rem;
+        font-size: 0.9rem;
 
         line-height: 1.75;
     }
@@ -1029,21 +931,13 @@ body {
 
     .event-details {
 
-        width: 100%;
-
-        display: flex;
-
         flex-direction: column;
 
         gap: 15px;
 
-        margin-top: 40px;
+        margin-top: 38px;
     }
 
-
-    /* ==================================================
-       EVENT BOX
-       ================================================== */
 
     .event-item {
 
@@ -1052,102 +946,58 @@ body {
         flex: none;
 
         padding: 25px 15px 27px;
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
-
-        justify-content: flex-start;
-
-        text-align: center;
-
-        overflow: hidden;
     }
 
 
     /* ==================================================
-       EVENT SVG — MOBILE
+       EVENT SVG
        ================================================== */
 
     .event-icon {
 
-        width: 44px;
+        width: 42px;
 
-        height: 44px;
-
-        min-width: 44px;
-
-        min-height: 44px;
-
-        max-width: 44px;
-
-        max-height: 44px;
+        height: 42px;
 
         margin: 0 auto 17px;
-
-        object-fit: contain;
     }
 
 
     /* ==================================================
-       EVENT LABEL
+       EVENT TITLES
        ================================================== */
 
     .event-item h2 {
 
-        width: 100%;
+        margin-bottom: 11px;
 
-        margin: 0 0 11px;
-
-        font-size: 1.05rem;
-
-        line-height: 1.2;
+        font-size: 1rem;
 
         letter-spacing: 2.5px;
     }
 
 
     /* ==================================================
-       EVENT MAIN TEXT
+       EVENT TEXT
        ================================================== */
 
     .event-item p {
 
-        width: 100%;
-
-        margin: 0 0 7px;
-
-        font-size: 1rem;
+        font-size: 0.98rem;
 
         line-height: 1.55;
-
-        overflow-wrap: anywhere;
     }
 
-
-    /* ==================================================
-       EVENT SECONDARY TEXT
-       ================================================== */
 
     .event-item span {
 
-        width: 100%;
-
-        font-size: 0.9rem;
-
-        line-height: 1.5;
+        font-size: 0.88rem;
     }
 
 
-    /* ==================================================
-       VENUE
-       ================================================== */
-
     .event-item:nth-child(3) p {
 
-        font-size: 0.94rem;
+        font-size: 0.9rem;
 
         line-height: 1.5;
     }
@@ -1159,31 +1009,29 @@ body {
 
     .cosmic-footer {
 
-        margin-top: 45px;
+        margin-top: 48px;
 
         padding-top: 22px;
     }
 
 
-    /* ==================================================
-       CLOSING MESSAGE
-       ================================================== */
+    .footer-line {
 
-    .closing-message {
-
-        margin-bottom: 22px;
-
-        padding: 0 8px;
-
-        font-size: 0.98rem;
-
-        line-height: 1.55;
+        margin-bottom: 24px;
     }
 
 
-    /* ==================================================
-       CODE SYMBOL
-       ================================================== */
+    .closing-message {
+
+        padding: 0 8px;
+
+        margin-bottom: 20px;
+
+        font-size: 0.95rem;
+
+        line-height: 1.6;
+    }
+
 
     .code-symbol {
 
@@ -1193,35 +1041,23 @@ body {
     }
 
 
-    /* ==================================================
-       COPYRIGHT
-       ================================================== */
-
     .copyright {
 
-        margin-bottom: 12px;
+        margin-bottom: 10px;
 
         font-size: 0.82rem;
 
-        letter-spacing: 1.8px;
-
-        line-height: 1.4;
+        letter-spacing: 1.6px;
     }
 
 
-    /* ==================================================
-       FOOTER DESCRIPTION
-       ================================================== */
-
     .footer-description {
 
-        padding: 0 10px;
+        padding: 0 8px;
 
-        font-size: 0.76rem;
+        font-size: 0.72rem;
 
         line-height: 1.6;
-
-        letter-spacing: 0.2px;
     }
 }
 
@@ -1233,228 +1069,110 @@ body {
 @media (max-width: 380px) {
 
 
-    /* ==================================================
-       SATURN
-       ================================================== */
-
     .saturn {
 
-        width: 42px;
+        width: 40px;
 
         top: 20px;
 
-        left: 6px;
+        left: 7px;
     }
 
 
-    /* ==================================================
-       MOON
-       ================================================== */
-
     .moon {
 
-        width: 42px;
+        width: 38px;
 
-        top: 25px;
+        top: 24px;
 
         right: 7px;
     }
 
 
-    /* ==================================================
-       CARD
-       ================================================== */
-
     .invitation {
 
-        width: calc(100% - 20px);
+        width: calc(100% - 18px);
 
-        margin-top: 105px;
+        margin-top: 95px;
 
-        padding: 26px 14px;
+        padding: 26px 13px;
     }
 
-
-    /* ==================================================
-       BATCH
-       ================================================== */
-
-    .batch {
-
-        font-size: 0.76rem;
-
-        letter-spacing: 2px;
-    }
-
-
-    /* ==================================================
-       TAGLINE
-       ================================================== */
-
-    .tagline {
-
-        font-size: 0.56rem;
-
-        letter-spacing: 1.7px;
-    }
-
-
-    /* ==================================================
-       CULTURAL
-       ================================================== */
 
     .main-title {
 
-        font-size: 2.45rem;
-
-        line-height: 0.9;
+        font-size: 2.35rem;
     }
 
-
-    /* ==================================================
-       DAY ROW
-       ================================================== */
 
     .day-title {
 
         gap: 5px;
-
-        margin-top: 6px;
     }
 
-
-    /* ==================================================
-       〰
-       ================================================== */
 
     .title-decoration {
 
-        font-size: 0.82rem;
-
-        transform: translateY(-1px);
+        font-size: 0.8rem;
     }
 
-
-    /* ==================================================
-       DAY
-       ================================================== */
 
     .day-text {
 
-        font-size: 2.3rem;
-
-        line-height: 0.9;
+        font-size: 2.15rem;
     }
 
-
-    /* ==================================================
-       MESSAGE HEADING
-       ================================================== */
 
     .message h2 {
 
-        font-size: 1.18rem;
+        font-size: 1.15rem;
     }
 
-
-    /* ==================================================
-       MESSAGE
-       ================================================== */
 
     .message p {
 
-        font-size: 0.88rem;
-
-        line-height: 1.75;
+        font-size: 0.86rem;
     }
 
-
-    /* ==================================================
-       EVENT BOX
-       ================================================== */
 
     .event-item {
 
-        padding: 23px 12px 25px;
+        padding-left: 10px;
+
+        padding-right: 10px;
     }
 
-
-    /* ==================================================
-       EVENT SVG
-       ================================================== */
 
     .event-icon {
 
         width: 40px;
 
         height: 40px;
-
-        min-width: 40px;
-
-        min-height: 40px;
-
-        max-width: 40px;
-
-        max-height: 40px;
-
-        margin-bottom: 15px;
     }
 
-
-    /* ==================================================
-       EVENT LABEL
-       ================================================== */
 
     .event-item h2 {
 
-        font-size: 0.96rem;
-
-        letter-spacing: 2.2px;
+        font-size: 0.92rem;
     }
 
-
-    /* ==================================================
-       EVENT TEXT
-       ================================================== */
 
     .event-item p {
 
-        font-size: 0.9rem;
-
-        line-height: 1.5;
+        font-size: 0.88rem;
     }
 
-
-    /* ==================================================
-       VENUE
-       ================================================== */
-
-    .event-item:nth-child(3) p {
-
-        font-size: 0.86rem;
-
-        line-height: 1.5;
-    }
-
-
-    /* ==================================================
-       COPYRIGHT
-       ================================================== */
 
     .copyright {
 
-        font-size: 0.72rem;
+        font-size: 0.7rem;
 
-        letter-spacing: 1.3px;
+        letter-spacing: 1.2px;
     }
 
 
-    /* ==================================================
-       FOOTER DESCRIPTION
-       ================================================== */
-
     .footer-description {
 
-        font-size: 0.68rem;
+        font-size: 0.66rem;
     }
 }
