@@ -13,14 +13,36 @@
    BODY / CELESTIAL BACKGROUND
    ================================================== */
 
+/* ==================================================
+   BODY / CELESTIAL BACKGROUND
+   ================================================== */
+
 body {
     min-height: 100vh;
+
     background:
+
+        /* Tiny stars */
+        radial-gradient(circle at 8% 12%, #f4d58a 0 1px, transparent 2px),
+        radial-gradient(circle at 18% 35%, #f4d58a 0 1px, transparent 2px),
+        radial-gradient(circle at 32% 10%, #f4d58a 0 1px, transparent 2px),
+        radial-gradient(circle at 48% 24%, #f4d58a 0 1px, transparent 2px),
+        radial-gradient(circle at 63% 8%, #f4d58a 0 1px, transparent 2px),
+        radial-gradient(circle at 78% 30%, #f4d58a 0 1px, transparent 2px),
+        radial-gradient(circle at 91% 15%, #f4d58a 0 1px, transparent 2px),
+
+        /* Larger glowing stars */
+        radial-gradient(circle at 25% 18%, #f4d58a 0 2px, transparent 3px),
+        radial-gradient(circle at 70% 18%, #f4d58a 0 2px, transparent 3px),
+        radial-gradient(circle at 88% 45%, #f4d58a 0 2px, transparent 3px),
+
+        /* Existing cosmic glow */
         radial-gradient(circle at 20% 20%, #172b50 0%, transparent 25%),
         radial-gradient(circle at 80% 70%, #321b35 0%, transparent 30%),
+
+        /* Main navy background */
         #07152b;
 }
-
 
 /* ==================================================
    SATURN DECORATION
@@ -324,22 +346,22 @@ body {
    SATURN — MOBILE
    ---------------------------------------------- */
 
-.saturn {
-    width: 100px;
-    top: 25px;
-    left: 15px;
-}
+    .saturn {
+        width: 100px;
+        top: 25px;
+        left: 15px;
+    }
 
 
-/* ----------------------------------------------
+    /* ----------------------------------------------
    MOON — MOBILE
    ---------------------------------------------- */
 
-.moon {
-    width: 70px;
-    top: 35px;
-    right: 20px;
-}
+    .moon {
+        width: 70px;
+        top: 35px;
+        right: 20px;
+    }
 
 
     /* ----------------------------------------------
