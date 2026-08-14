@@ -153,7 +153,7 @@ body::after {
     display: block;
 }
 
-/* Saturn: Moved further left to prevent overlapping the card */
+/* Saturn: Desktop Position */
 .celestial.saturn {
     top: 33%;
     left: -55px;
@@ -163,10 +163,10 @@ body::after {
     opacity: 0.95;
 }
 
-/* Moon: Right Top Side */
+/* Moon: Desktop Position */
 .celestial.moon {
     top: 10px;
-    right: -15px;
+    right: -25px;
     width: 22px;
     height: 22px;
     filter: drop-shadow(0 0 6px #ffffff) drop-shadow(0 0 12px rgba(230, 203, 139, 0.9));
@@ -527,23 +527,25 @@ body::after {
 }
 
 /* ==========================================================================
-   11. MOBILE RESPONSIVENESS
+   11. MOBILE RESPONSIVENESS & PADDING ADJUSTMENTS
    ========================================================================== */
 @media (max-width: 580px) {
     body {
-        padding: 30px 12px;
+        /* Increased side padding from 12px to 28px for breathing space */
+        padding: 30px 28px;
     }
 
+    /* Celestial elements tuned to fit inside the 28px margin */
     .celestial.saturn {
-        left: -30px;
+        left: -22px;
         top: 33%;
         width: 24px;
         height: 24px;
     }
 
     .celestial.moon {
-        right: -8px;
-        top: 5px;
+        right: -16px;
+        top: 8px;
         width: 18px;
         height: 18px;
     }
@@ -551,13 +553,13 @@ body::after {
     .sp-1,
     .sp-3,
     .sp-5 {
-        left: -5px;
+        left: -12px;
     }
 
     .sp-2,
     .sp-4,
     .sp-6 {
-        right: -5px;
+        right: -12px;
     }
 
     .poster-card {
@@ -570,29 +572,29 @@ body::after {
 
     .card-border-inner {
         border-radius: 106px 106px 8px 8px;
-        padding: 30px 18px 24px 18px;
+        padding: 28px 16px 22px 16px;
     }
 
     .title-cultural {
-        font-size: 40px;
+        font-size: 38px;
         letter-spacing: 2px;
     }
 
     .title-day {
-        font-size: 44px;
+        font-size: 42px;
         letter-spacing: 3px;
     }
 
     .flourish-svg {
-        width: 35px;
+        width: 32px;
     }
 
     .quote {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .invitation-body {
-        font-size: 16.5px;
+        font-size: 16px;
     }
 
     .details-box {

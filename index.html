@@ -4,29 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DCC | CSE-25 - Cultural Day | 2026</title>
+    <title>DCC | CSE-25 - Cultural Day 2026</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <div class="wrapper">
-        <!-- Fixed Tiny Saturn Accent (Top Left) -->
+        <!-- Fixed Tiny Saturn Accent (Moved to Bottom Left & Glowing) -->
         <div class="celestial saturn">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <ellipse cx="50" cy="50" rx="40" ry="12" fill="none" stroke="#e6cb8b" stroke-width="5"
-                    transform="rotate(-20 50 50)" />
-                <circle cx="50" cy="50" r="22" fill="#cba358" />
-                <path d="M 12 45 A 40 12 0 0 1 88 39" fill="none" stroke="#e6cb8b" stroke-width="5"
-                    transform="rotate(-20 50 50)" />
-            </svg>
+            <img src="./assets/saturn.svg" alt="Saturn" class="celestial-img"
+                onerror="this.onerror=null; this.src='saturn.svg';">
         </div>
 
-        <!-- Fixed Tiny Crescent Moon Accent (Top Right) -->
+        <!-- Fixed Tiny Crescent Moon Accent (Top Right & Glowing) -->
         <div class="celestial moon">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <path d="M 50 10 A 38 38 0 1 0 88 62 A 32 32 0 1 1 50 10 Z" fill="#e6cb8b" />
-            </svg>
+            <img src="./assets/moon.svg" alt="Moon" class="celestial-img"
+                onerror="this.onerror=null; this.src='moon.svg';">
         </div>
 
         <!-- Animated Background Sparkles & Star Accents -->
@@ -149,7 +143,7 @@
         <footer class="outer-footer">
             <div class="code-icon">&lt;/&gt;</div>
             <p class="copyright">DCC &bull; CSE 25th BATCH</p>
-            <p class="tagline">Crafted with passion &bull; Dedicated to our memories</p>
+            <p class="tagline">Crafted with memories, moments &bull; And a little code <3</p>
             <div class="footer-heart">♥</div>
         </footer>
     </div>
