@@ -1,4 +1,7 @@
-/* Reset default styles */
+/* ==================================================
+   RESET DEFAULT BROWSER STYLES
+   ================================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,10 +9,12 @@
 }
 
 
-/* Body Background */
+/* ==================================================
+   BODY / CELESTIAL BACKGROUND
+   ================================================== */
+
 body {
     min-height: 100vh;
-
     background:
         radial-gradient(circle at 20% 20%, #172b50 0%, transparent 25%),
         radial-gradient(circle at 80% 70%, #321b35 0%, transparent 30%),
@@ -17,32 +22,42 @@ body {
 }
 
 
-/* Invitation Container */
+/* ==================================================
+   MAIN INVITATION CARD
+   ================================================== */
+
 .invitation {
     width: min(90%, 900px);
     min-height: 100vh;
     margin: 40px auto;
     padding: 50px;
-
     background: #f7f0df;
-
     border: 2px solid #b28a4a;
     border-radius: 30px;
-
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
 }
 
-/* Invitation Header */
+
+/* ==================================================
+   INVITATION HEADER
+   ================================================== */
+
 .invitation-header {
     text-align: center;
 }
+
+
+/* DCC Logo */
 
 .invitation-header img {
     width: 120px;
     height: auto;
     display: block;
-   margin: 0 auto 20px;
+    margin: 0 auto 20px;
 }
+
+
+/* Batch name */
 
 .batch {
     font-size: 1.1rem;
@@ -51,12 +66,20 @@ body {
     color: #7b2430;
 }
 
+
+/* Small tagline */
+
 .tagline {
     margin-top: 10px;
     font-size: 0.8rem;
     letter-spacing: 4px;
     color: #8a6a38;
 }
+
+
+/* ==================================================
+   MAIN TITLE — CULTURAL DAY
+   ================================================== */
 
 .main-title {
     text-align: center;
@@ -65,15 +88,85 @@ body {
     margin: 35px 0 20px;
 }
 
+
+/* "Cultural" */
+
 .main-title span:first-child {
     color: #071e49;
 }
+
+
+/* "Day" */
 
 .main-title span:last-child {
     color: #7b2430;
 }
 
 
+/* ==================================================
+   QUOTE
+   ================================================== */
+
+.quote {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.15rem;
+    font-style: italic;
+    color: #5f513e;
+}
+
+
+/* Decorative line above quote */
+
+.quote::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: #b28a4a;
+    margin: 0 auto 12px;
+}
+
+/* ==================================================
+   INVITATION MESSAGE
+   ================================================== */
+
+.message {
+    max-width: 650px;
+    margin: 45px auto 0;
+    text-align: center;
+    color: #40382e;
+}
+
+
+/* Greeting */
+
+.message h2 {
+    margin-bottom: 20px;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #7b2430;
+}
+
+
+/* Message paragraphs */
+
+.message p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+
+/* Decorative symbol */
+
+.message::before {
+    content: "✦";
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #b28a4a;
+}
 
 
 
@@ -86,8 +179,21 @@ body {
 
 
 
-/* Responsive Design */
+
+
+
+
+
+/* ==================================================
+   RESPONSIVE DESIGN — MOBILE
+   ================================================== */
+
 @media (max-width: 600px) {
+
+
+    /* ----------------------------------------------
+       INVITATION CARD
+       ---------------------------------------------- */
 
     .invitation {
         width: 94%;
@@ -96,23 +202,66 @@ body {
         border-radius: 20px;
     }
 
+
+    /* ----------------------------------------------
+       DCC LOGO
+       ---------------------------------------------- */
+
     .invitation-header img {
         width: 90px;
     }
+
+
+    /* ----------------------------------------------
+       BATCH
+       ---------------------------------------------- */
 
     .batch {
         font-size: 0.9rem;
         letter-spacing: 2px;
     }
 
+
+    /* ----------------------------------------------
+       TAGLINE
+       ---------------------------------------------- */
+
     .tagline {
         font-size: 0.65rem;
         letter-spacing: 2px;
     }
+
+
+    /* ----------------------------------------------
+       MAIN TITLE
+       ---------------------------------------------- */
 
     .main-title {
         font-size: 3rem;
         margin: 25px 0 15px;
     }
 
+
+    /* ----------------------------------------------
+       QUOTE
+       ---------------------------------------------- */
+
+    .quote {
+        font-size: 0.95rem;
+        margin: 15px 0;
+    }
+
+}
+
+.message {
+    margin-top: 30px;
+}
+
+.message h2 {
+    font-size: 1.1rem;
+}
+
+.message p {
+    font-size: 0.9rem;
+    line-height: 1.7;
 }
