@@ -1,1178 +1,330 @@
-/* ==================================================
-   RESET
-   ================================================== */
+:root {
+    --bg-dark: #030612;
+    --card-bg-gradient: radial-gradient(circle at center, #fbf7ef 0%, #f3ebd5 100%);
+    --gold-primary: #d4af37;
+    --gold-dark: #b8860b;
+    --text-navy: #0e1b33;
+    --text-muted: #555555;
+    --accent-red: #801321;
+}
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-
-
-/* ==================================================
-   HTML
-   ================================================== */
-
-html {
-    width: 100%;
-    min-height: 100%;
-}
-
-
-/* ==================================================
-   BODY / COSMIC BACKGROUND
-   ================================================== */
 
 body {
-
-    width: 100%;
+    background-color: var(--bg-dark);
+    background-image:
+        radial-gradient(circle at 50% 15%, #1e1b4b 0%, #090d1f 65%, #030612 100%);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text-navy);
     min-height: 100vh;
-
-    position: relative;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow-x: hidden;
-
-    background:
-
-        /* Small stars */
-
-        radial-gradient(circle at 7% 10%,
-            #f4d58a 0 1px,
-            transparent 2px),
-
-        radial-gradient(circle at 16% 24%,
-            #f4d58a 0 1px,
-            transparent 2px),
-
-        radial-gradient(circle at 27% 8%,
-            #f4d58a 0 1px,
-            transparent 2px),
-
-        radial-gradient(circle at 38% 19%,
-            #f4d58a 0 1px,
-            transparent 2px),
-
-        radial-gradient(circle at 49% 7%,
-            #f4d58a 0 1px,
-            transparent 2px),
-
-        radial-gradient(circle at 61% 16%,
-            #f4d58a 0 1px,
-            transparent 2px),
-
-        radial-gradient(circle at 73% 7%,
-            #f4d58a 0 1px,
-            transparent 2px),
-
-        radial-gradient(circle at 84% 22%,
-            #f4d58a 0 1px,
-            transparent 2px),
-
-        radial-gradient(circle at 94% 10%,
-            #f4d58a 0 1px,
-            transparent 2px),
-
-        radial-gradient(circle at 12% 43%,
-            #f4d58a 0 1px,
-            transparent 2px),
-
-        radial-gradient(circle at 24% 55%,
-            #f4d58a 0 1px,
-            transparent 2px),
-
-        radial-gradient(circle at 36% 42%,
-            #f4d58a 0 1px,
-            transparent 2px),
-
-        radial-gradient(circle at 52% 53%,
-            #f4d58a 0 1px,
-            transparent 2px),
-
-        radial-gradient(circle at 68% 43%,
-            #f4d58a 0 1px,
-            transparent 2px),
-
-        radial-gradient(circle at 82% 54%,
-            #f4d58a 0 1px,
-            transparent 2px),
-
-        radial-gradient(circle at 94% 46%,
-            #f4d58a 0 1px,
-            transparent 2px),
-
-        radial-gradient(circle at 8% 73%,
-            #f4d58a 0 1px,
-            transparent 2px),
-
-        radial-gradient(circle at 21% 87%,
-            #f4d58a 0 1px,
-            transparent 2px),
-
-        radial-gradient(circle at 43% 76%,
-            #f4d58a 0 1px,
-            transparent 2px),
-
-        radial-gradient(circle at 57% 91%,
-            #f4d58a 0 1px,
-            transparent 2px),
-
-        radial-gradient(circle at 76% 78%,
-            #f4d58a 0 1px,
-            transparent 2px),
-
-        radial-gradient(circle at 91% 88%,
-            #f4d58a 0 1px,
-            transparent 2px),
-
-
-        /* Bright stars */
-
-        radial-gradient(circle at 22% 15%,
-            #ffe7a6 0 1.5px,
-            transparent 3px),
-
-        radial-gradient(circle at 67% 27%,
-            #ffe7a6 0 1.5px,
-            transparent 3px),
-
-        radial-gradient(circle at 87% 39%,
-            #ffe7a6 0 1.5px,
-            transparent 3px),
-
-        radial-gradient(circle at 32% 67%,
-            #ffe7a6 0 1.5px,
-            transparent 3px),
-
-        radial-gradient(circle at 72% 72%,
-            #ffe7a6 0 1.5px,
-            transparent 3px),
-
-
-        /* Cosmic glow */
-
-        radial-gradient(ellipse at 15% 25%,
-            rgba(30, 62, 115, 0.55),
-            transparent 55%),
-
-        radial-gradient(ellipse at 85% 25%,
-            rgba(52, 35, 82, 0.5),
-            transparent 58%),
-
-        radial-gradient(ellipse at 50% 85%,
-            rgba(25, 45, 90, 0.35),
-            transparent 55%),
-
-
-        /* Main background */
-
-        linear-gradient(135deg,
-            #030b1c 0%,
-            #07152b 40%,
-            #091a34 70%,
-            #040c20 100%);
+    padding: 20px 10px;
 }
 
+.page-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
-/* ==================================================
-   SATURN
-   ================================================== */
+.poster-container {
+    position: relative;
+    width: 100%;
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Precise Celestial Elements Positioning & Sizing */
+.celestial {
+    position: absolute;
+    pointer-events: none;
+    z-index: 4;
+}
 
 .saturn {
-
-    position: absolute;
-
-    width: 82px;
-
-    top: 35px;
-    left: 45px;
-
-    z-index: 0;
-
-    pointer-events: none;
+    top: 18px;
+    left: 8%;
+    width: 48px;
+    height: auto;
 }
-
-
-/* ==================================================
-   MOON
-   ================================================== */
 
 .moon {
-
-    position: absolute;
-
-    width: 54px;
-
-    top: 42px;
-    right: 50px;
-
-    z-index: 0;
-
-    pointer-events: none;
-
-    filter: sepia(1) saturate(1.5);
-}
-
-
-/* ==================================================
-   MAIN INVITATION CARD
-   ================================================== */
-
-.invitation {
-
-    width: min(88%, 900px);
-
-    margin: 90px auto;
-
-    padding: 55px;
-
-    position: relative;
-
-    z-index: 1;
-
-    background: #f7f0df;
-
-    border: 2px solid #b28a4a;
-
-    border-radius: 30px;
-
-    box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.35);
-}
-
-
-/* ==================================================
-   HEADER
-   ================================================== */
-
-.invitation-header {
-    text-align: center;
-}
-
-
-/* ==================================================
-   DCC LOGO
-   ================================================== */
-
-.invitation-header img {
-
-    width: 120px;
-
+    top: 22px;
+    right: 9%;
+    width: 26px;
     height: auto;
-
-    display: block;
-
-    margin: 0 auto 20px;
 }
 
-
-/* ==================================================
-   BATCH
-   ================================================== */
-
-.batch {
-
-    font-family:
-        "Trebuchet MS",
-        Arial,
-        sans-serif;
-
-    font-size: 1.05rem;
-
-    font-weight: 600;
-
-    letter-spacing: 4px;
-
-    color: #7b2430;
+/* Main Card Wrapper */
+.poster-card {
+    position: relative;
+    width: 100%;
+    background: var(--card-bg-gradient);
+    border-radius: 18px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.75), inset 0 0 30px rgba(212, 175, 55, 0.15);
+    z-index: 2;
+    padding: 10px;
 }
 
-
-/* ==================================================
-   TAGLINE
-   ================================================== */
-
-.tagline {
-
-    margin-top: 12px;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 0.85rem;
-
-    letter-spacing: 4px;
-
-    color: #8a6a38;
+/* Outer & Inner Dual Gold Borders */
+.card-border-outer {
+    border: 2px solid var(--gold-primary);
+    border-radius: 14px;
+    padding: 5px;
 }
 
+.card-border-inner {
+    border: 1px solid var(--gold-primary);
+    border-radius: 10px;
+    padding: 32px 20px 24px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+}
 
-/* ==================================================
-   TITLE WRAPPER
-   ================================================== */
+/* Header & Logo */
+.poster-header {
+    margin-bottom: 14px;
+}
 
-.title-wrapper {
-
+.logo-wrapper {
     display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
     justify-content: center;
-
-    margin: 40px 0 20px;
+    margin-bottom: 6px;
 }
 
+.dcc-logo {
+    width: 52px;
+    height: auto;
+}
 
-/* ==================================================
-   CULTURAL
-   ================================================== */
+.dept-title {
+    font-family: 'Cinzel', serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--text-navy);
+}
+
+.celebrate-subtitle {
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--gold-dark);
+    display: block;
+    margin-top: 3px;
+}
+
+/* Titles Section */
+.title-section {
+    margin-bottom: 14px;
+}
 
 .main-title {
-
-    margin: 0;
-
-    text-align: center;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:
-        clamp(3rem, 7vw, 5.5rem);
-
-    line-height: 0.9;
-
-    font-weight: 700;
-
-    color: #071e49;
+    font-family: 'Cinzel', serif;
+    font-size: 34px;
+    font-weight: 800;
+    color: var(--text-navy);
+    line-height: 1.05;
+    letter-spacing: 1px;
 }
 
+.sub-title {
+    display: inline-block;
+}
 
-/* ==================================================
-   DAY ROW
-   ================================================== */
-
-.day-title {
-
+.title-middle {
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     gap: 12px;
+    margin: 4px 0;
+}
 
+.title-line {
+    width: 30px;
+    height: 1px;
+    background: var(--gold-dark);
+    opacity: 0.6;
+}
+
+.script-quote {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 21px;
+    color: var(--text-navy);
+    margin-top: 6px;
+}
+
+.heart-symbol {
+    color: var(--accent-red);
+    font-size: 9px;
+    margin: 8px 0;
+}
+
+/* Invitation Section */
+.invitation-section {
+    margin-bottom: 16px;
+}
+
+.greeting-text {
+    font-weight: 700;
+    color: var(--accent-red);
+    font-size: 12.5px;
+    margin-bottom: 6px;
+}
+
+.body-text {
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: var(--text-navy);
+    padding: 0 8px;
+}
+
+/* Info Grid Layout */
+.info-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 14px 10px;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+.info-icon {
+    width: 22px;
+    height: 22px;
+    margin-bottom: 5px;
+}
+
+.info-label {
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--gold-dark);
+    margin-bottom: 2px;
+}
+
+.info-value {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--text-navy);
+}
+
+.info-subvalue {
+    font-size: 9.5px;
+    color: var(--text-muted);
+    margin-top: 1px;
+}
+
+.info-separator {
+    display: none;
+}
+
+/* Closing Section */
+.closing-section {
     margin-top: 8px;
 }
 
-
-/* ==================================================
-   GOLD 〰
-   ================================================== */
-
-.title-decoration {
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 1.5rem;
-
-    line-height: 1;
-
-    color: #b28a4a;
-
-    transform: translateY(-2px);
+.closing-quote {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 18px;
+    color: var(--text-navy);
 }
 
-
-/* ==================================================
-   DAY
-   ================================================== */
-
-.day-text {
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:
-        clamp(2.5rem, 6vw, 4.5rem);
-
-    line-height: 0.9;
-
-    font-weight: 700;
-
-    color: #7b2430;
-}
-
-
-/* ==================================================
-   QUOTE
-   ================================================== */
-
-.quote {
-
-    max-width: 650px;
-
-    margin: 25px auto 0;
-
-    padding: 0 10px;
-
-    text-align: center;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 1.15rem;
-
-    line-height: 1.6;
-
-    font-style: italic;
-
-    color: #5f513e;
-}
-
-
-.quote::before {
-
-    content: "";
-
-    display: block;
-
+.closing-line {
     width: 70px;
-
-    height: 2px;
-
-    background: #b28a4a;
-
-    margin: 0 auto 18px;
-}
-
-
-/* ==================================================
-   MESSAGE
-   ================================================== */
-
-.message {
-
-    max-width: 650px;
-
-    margin: 55px auto 0;
-
-    text-align: center;
-}
-
-
-.message h2 {
-
-    margin-bottom: 25px;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 1.8rem;
-
-    line-height: 1.3;
-
-    color: #7b2430;
-}
-
-
-.message p {
-
-    margin-bottom: 12px;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 1.05rem;
-
-    line-height: 1.7;
-
-    color: #40382e;
-}
-
-
-/* ==================================================
-   EVENT DETAILS
-   ================================================== */
-
-.event-details {
-
-    display: flex;
-
-    gap: 15px;
-
-    width: 100%;
-
-    margin-top: 45px;
-}
-
-
-/* ==================================================
-   EVENT BOX
-   ================================================== */
-
-.event-item {
-
-    flex: 1;
-
-    min-width: 0;
-
-    padding: 25px 15px;
-
-    text-align: center;
-
-    border: 1px solid #b28a4a;
-
-    border-radius: 15px;
-
-    background: rgba(255, 255, 255, 0.25);
-}
-
-
-/* ==================================================
-   EVENT SVG
-   ================================================== */
-
-.event-icon {
-
-    display: block;
-
-    width: 42px;
-    height: 42px;
-
-    margin: 0 auto 18px;
-
-    object-fit: contain;
-}
-
-
-/* ==================================================
-   EVENT TITLE
-   ================================================== */
-
-.event-item h2 {
-
-    margin-bottom: 12px;
-
-    font-family:
-        "Trebuchet MS",
-        Arial,
-        sans-serif;
-
-    font-size: 1.05rem;
-
-    letter-spacing: 3px;
-
-    color: #6b232d;
-}
-
-
-/* ==================================================
-   EVENT MAIN TEXT
-   ================================================== */
-
-.event-item p {
-
-    margin-bottom: 8px;
-
-    font-family:
-        "Trebuchet MS",
-        Arial,
-        sans-serif;
-
-    font-size: 1.08rem;
-
-    line-height: 1.55;
-
-    font-weight: 700;
-
-    color: #061d47;
-
-    overflow-wrap: break-word;
-}
-
-
-/* ==================================================
-   EVENT SECONDARY TEXT
-   ================================================== */
-
-.event-item span {
-
-    display: block;
-
-    font-family:
-        "Trebuchet MS",
-        Arial,
-        sans-serif;
-
-    font-size: 0.92rem;
-
-    line-height: 1.5;
-
-    color: #3f2806;
-}
-
-
-/* ==================================================
-   VENUE
-   ================================================== */
-
-.event-item:nth-child(3) p {
-
-    font-size: 1rem;
-
-    line-height: 1.5;
-}
-
-
-/* ==================================================
-   COSMIC FOOTER
-   ================================================== */
-
-.cosmic-footer {
-
-    width: 100%;
-
-    margin-top: 60px;
-
-    padding-top: 25px;
-
-    text-align: center;
-}
-
-
-/* ==================================================
-   FOOTER GOLD LINE
-   ================================================== */
-
-.footer-line {
-
-    width: 100%;
-
     height: 1px;
-
-    margin-bottom: 28px;
-
-    background: #b28a4a;
+    background: var(--gold-dark);
+    margin: 6px auto 0 auto;
+    opacity: 0.6;
 }
 
-
-/* ==================================================
-   CLOSING MESSAGE
-   ================================================== */
-
-.closing-message {
-
-    margin-bottom: 22px;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 1.12rem;
-
-    line-height: 1.5;
-
-    font-style: italic;
-
-    color: #7b2430;
+/* Footer & Wave Background Art Simulation */
+.poster-footer {
+    position: relative;
+    width: 100%;
+    margin-top: -18px;
+    padding: 35px 15px 20px 15px;
+    background: linear-gradient(180deg, rgba(3, 6, 18, 0) 0%, #060b19 35%, #030612 100%);
+    text-align: center;
+    border-radius: 0 0 18px 18px;
+    z-index: 1;
 }
 
-
-/* ==================================================
-   CODE SYMBOL
-   ================================================== */
-
-.code-symbol {
-
-    margin-bottom: 18px;
-
-    font-family:
-        "Courier New",
-        monospace;
-
-    font-size: 1.65rem;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    color: #b28a4a;
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
 }
 
-
-/* ==================================================
-   COPYRIGHT
-   ================================================== */
+.code-icon {
+    font-family: monospace;
+    font-size: 13px;
+    color: #e2e8f0;
+    font-weight: 600;
+    margin-bottom: 1px;
+}
 
 .copyright {
-
-    margin-bottom: 12px;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 1rem;
-
+    font-size: 9.5px;
     font-weight: 700;
-
-    letter-spacing: 2px;
-
-    color: #071e49;
+    color: #cbd5e1;
 }
 
-
-/* ==================================================
-   FOOTER DESCRIPTION
-   ================================================== */
-
-.footer-description {
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 0.82rem;
-
-    line-height: 1.5;
-
-    color: #8a6a38;
+.credits {
+    font-size: 8.5px;
+    color: #94a3b8;
 }
 
+.footer-heart {
+    color: var(--accent-red);
+    font-size: 7.5px;
+    margin-top: 3px;
+}
 
-/* ==================================================
-   MOBILE
-   ================================================== */
-
-@media (max-width: 600px) {
-
-
-    /* ==================================================
-       COSMIC DECORATIONS
-       ================================================== */
-
-    .saturn {
-
-        width: 48px;
-
-        top: 22px;
-
-        left: 10px;
+/* Desktop & Tablet Optimization */
+@media (min-width: 768px) {
+    .poster-container {
+        max-width: 580px;
     }
 
-
-    .moon {
-
-        width: 44px;
-
-        top: 28px;
-
-        right: 10px;
+    .card-border-inner {
+        padding: 40px 30px 28px 30px;
     }
-
-
-    /* ==================================================
-       INVITATION CARD
-       ================================================== */
-
-    .invitation {
-
-        width: calc(100% - 28px);
-
-        margin: 105px auto 35px;
-
-        padding: 30px 18px;
-
-        border-radius: 22px;
-    }
-
-
-    /* ==================================================
-       LOGO
-       ================================================== */
-
-    .invitation-header img {
-
-        width: 88px;
-
-        margin-bottom: 17px;
-    }
-
-
-    /* ==================================================
-       BATCH
-       ================================================== */
-
-    .batch {
-
-        font-size: 0.8rem;
-
-        letter-spacing: 2px;
-    }
-
-
-    /* ==================================================
-       TAGLINE
-       ================================================== */
-
-    .tagline {
-
-        font-size: 0.6rem;
-
-        letter-spacing: 1.8px;
-    }
-
-
-    /* ==================================================
-       TITLE
-       ================================================== */
-
-    .title-wrapper {
-
-        margin: 35px 0 20px;
-    }
-
 
     .main-title {
-
-        font-size: 2.7rem;
-
-        line-height: 0.9;
+        font-size: 42px;
     }
 
-
-    .day-title {
-
-        gap: 7px;
-
-        margin-top: 8px;
+    .info-container {
+        flex-direction: row;
+        align-items: center;
+        padding: 14px;
     }
 
-
-    .title-decoration {
-
-        font-size: 1rem;
-    }
-
-
-    .day-text {
-
-        font-size: 2.45rem;
-
-        line-height: 0.9;
-    }
-
-
-    /* ==================================================
-       QUOTE
-       ================================================== */
-
-    .quote {
-
-        margin-top: 22px;
-
-        padding: 0 5px;
-
-        font-size: 0.9rem;
-
-        line-height: 1.65;
-    }
-
-
-    /* ==================================================
-       MESSAGE
-       ================================================== */
-
-    .message {
-
-        margin-top: 42px;
-    }
-
-
-    .message h2 {
-
-        margin-bottom: 20px;
-
-        font-size: 1.25rem;
-
-        line-height: 1.4;
-    }
-
-
-    .message p {
-
-        font-size: 0.9rem;
-
-        line-height: 1.75;
-    }
-
-
-    /* ==================================================
-       EVENT DETAILS
-       ================================================== */
-
-    .event-details {
-
-        flex-direction: column;
-
-        gap: 15px;
-
-        margin-top: 38px;
-    }
-
-
-    .event-item {
-
-        width: 100%;
-
-        flex: none;
-
-        padding: 25px 15px 27px;
-    }
-
-
-    /* ==================================================
-       EVENT SVG
-       ================================================== */
-
-    .event-icon {
-
-        width: 42px;
-
-        height: 42px;
-
-        margin: 0 auto 17px;
-    }
-
-
-    /* ==================================================
-       EVENT TITLES
-       ================================================== */
-
-    .event-item h2 {
-
-        margin-bottom: 11px;
-
-        font-size: 1rem;
-
-        letter-spacing: 2.5px;
-    }
-
-
-    /* ==================================================
-       EVENT TEXT
-       ================================================== */
-
-    .event-item p {
-
-        font-size: 0.98rem;
-
-        line-height: 1.55;
-    }
-
-
-    .event-item span {
-
-        font-size: 0.88rem;
-    }
-
-
-    .event-item:nth-child(3) p {
-
-        font-size: 0.9rem;
-
-        line-height: 1.5;
-    }
-
-
-    /* ==================================================
-       FOOTER
-       ================================================== */
-
-    .cosmic-footer {
-
-        margin-top: 48px;
-
-        padding-top: 22px;
-    }
-
-
-    .footer-line {
-
-        margin-bottom: 24px;
-    }
-
-
-    .closing-message {
-
-        padding: 0 8px;
-
-        margin-bottom: 20px;
-
-        font-size: 0.95rem;
-
-        line-height: 1.6;
-    }
-
-
-    .code-symbol {
-
-        margin-bottom: 17px;
-
-        font-size: 1.45rem;
-    }
-
-
-    .copyright {
-
-        margin-bottom: 10px;
-
-        font-size: 0.82rem;
-
-        letter-spacing: 1.6px;
-    }
-
-
-    .footer-description {
-
-        padding: 0 8px;
-
-        font-size: 0.72rem;
-
-        line-height: 1.6;
-    }
-}
-
-
-/* ==================================================
-   VERY SMALL PHONES
-   ================================================== */
-
-@media (max-width: 380px) {
-
-
-    .saturn {
-
-        width: 40px;
-
-        top: 20px;
-
-        left: 7px;
-    }
-
-
-    .moon {
-
-        width: 38px;
-
-        top: 24px;
-
-        right: 7px;
-    }
-
-
-    .invitation {
-
-        width: calc(100% - 18px);
-
-        margin-top: 95px;
-
-        padding: 26px 13px;
-    }
-
-
-    .main-title {
-
-        font-size: 2.35rem;
-    }
-
-
-    .day-title {
-
-        gap: 5px;
-    }
-
-
-    .title-decoration {
-
-        font-size: 0.8rem;
-    }
-
-
-    .day-text {
-
-        font-size: 2.15rem;
-    }
-
-
-    .message h2 {
-
-        font-size: 1.15rem;
-    }
-
-
-    .message p {
-
-        font-size: 0.86rem;
-    }
-
-
-    .event-item {
-
-        padding-left: 10px;
-
-        padding-right: 10px;
-    }
-
-
-    .event-icon {
-
-        width: 40px;
-
+    .info-separator {
+        display: block;
+        width: 1px;
         height: 40px;
-    }
-
-
-    .event-item h2 {
-
-        font-size: 0.92rem;
-    }
-
-
-    .event-item p {
-
-        font-size: 0.88rem;
-    }
-
-
-    .copyright {
-
-        font-size: 0.7rem;
-
-        letter-spacing: 1.2px;
-    }
-
-
-    .footer-description {
-
-        font-size: 0.66rem;
+        background: rgba(212, 175, 55, 0.35);
     }
 }
