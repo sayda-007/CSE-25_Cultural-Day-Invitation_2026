@@ -16,8 +16,7 @@
 
 body {
     background-color: var(--bg-dark);
-    background-image:
-        radial-gradient(circle at 50% 15%, #1e1b4b 0%, #090d1f 65%, #030612 100%);
+    background-image: radial-gradient(circle at 50% 15%, #1e1b4b 0%, #090d1f 65%, #030612 100%);
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--text-navy);
     min-height: 100vh;
@@ -25,7 +24,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow-x: hidden;
-    padding: 20px 10px;
+    padding: 15px 8px;
 }
 
 .page-wrapper {
@@ -43,7 +42,7 @@ body {
     align-items: center;
 }
 
-/* Precise Celestial Elements Positioning & Sizing */
+/* Scaled & Positioned Celestial Assets */
 .celestial {
     position: absolute;
     pointer-events: none;
@@ -51,86 +50,85 @@ body {
 }
 
 .saturn {
-    top: 18px;
-    left: 8%;
-    width: 48px;
+    top: clamp(10px, 2vw, 18px);
+    left: clamp(4%, 7%, 8%);
+    width: clamp(32px, 8vw, 48px);
     height: auto;
 }
 
 .moon {
-    top: 22px;
-    right: 9%;
-    width: 26px;
+    top: clamp(12px, 2.5vw, 22px);
+    right: clamp(5%, 8%, 9%);
+    width: clamp(18px, 5vw, 26px);
     height: auto;
 }
 
-/* Main Card Wrapper */
+/* Poster Card Frame */
 .poster-card {
     position: relative;
     width: 100%;
     background: var(--card-bg-gradient);
-    border-radius: 18px;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.75), inset 0 0 30px rgba(212, 175, 55, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75), inset 0 0 20px rgba(212, 175, 55, 0.15);
     z-index: 2;
-    padding: 10px;
+    padding: clamp(6px, 1.5vw, 10px);
 }
 
-/* Outer & Inner Dual Gold Borders */
 .card-border-outer {
     border: 2px solid var(--gold-primary);
-    border-radius: 14px;
-    padding: 5px;
+    border-radius: 12px;
+    padding: clamp(3px, 1vw, 5px);
 }
 
 .card-border-inner {
     border: 1px solid var(--gold-primary);
-    border-radius: 10px;
-    padding: 32px 20px 24px 20px;
+    border-radius: 9px;
+    padding: clamp(20px, 5vw, 36px) clamp(10px, 3vw, 24px) clamp(16px, 4vw, 28px) clamp(10px, 3vw, 24px);
     text-align: center;
     background: rgba(255, 255, 255, 0.15);
 }
 
 /* Header & Logo */
 .poster-header {
-    margin-bottom: 14px;
+    margin-bottom: clamp(10px, 2.5vw, 14px);
 }
 
 .logo-wrapper {
     display: flex;
     justify-content: center;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
 }
 
 .dcc-logo {
-    width: 52px;
+    width: clamp(40px, 10vw, 52px);
     height: auto;
 }
 
 .dept-title {
     font-family: 'Cinzel', serif;
-    font-size: 15px;
+    font-size: clamp(12px, 3.2vw, 15px);
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     color: var(--text-navy);
 }
 
 .celebrate-subtitle {
-    font-size: 8.5px;
+    font-size: clamp(7px, 1.8vw, 8.5px);
     font-weight: 700;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     color: var(--gold-dark);
     display: block;
-    margin-top: 3px;
+    margin-top: 2px;
 }
 
-/* Titles Section */
+/* Main Titles */
 .title-section {
-    margin-bottom: 14px;
+    margin-bottom: clamp(10px, 2.5vw, 14px);
 }
 
 .main-title {
     font-family: 'Cinzel', serif;
-    font-size: 34px;
+    font-size: clamp(26px, 7vw, 42px);
     font-weight: 800;
     color: var(--text-navy);
     line-height: 1.05;
@@ -145,12 +143,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    margin: 4px 0;
+    gap: clamp(6px, 2vw, 12px);
+    margin: 2px 0;
 }
 
 .title-line {
-    width: 30px;
+    width: clamp(20px, 5vw, 30px);
     height: 1px;
     background: var(--gold-dark);
     opacity: 0.6;
@@ -158,46 +156,46 @@ body {
 
 .script-quote {
     font-family: 'Pinyon Script', cursive;
-    font-size: 21px;
+    font-size: clamp(16px, 4.2vw, 21px);
     color: var(--text-navy);
-    margin-top: 6px;
+    margin-top: 4px;
 }
 
 .heart-symbol {
     color: var(--accent-red);
-    font-size: 9px;
-    margin: 8px 0;
+    font-size: clamp(7px, 1.8vw, 9px);
+    margin: clamp(4px, 1.5vw, 8px) 0;
 }
 
-/* Invitation Section */
+/* Invitation Copy */
 .invitation-section {
-    margin-bottom: 16px;
+    margin-bottom: clamp(12px, 3vw, 16px);
 }
 
 .greeting-text {
     font-weight: 700;
     color: var(--accent-red);
-    font-size: 12.5px;
-    margin-bottom: 6px;
+    font-size: clamp(11px, 2.6vw, 12.5px);
+    margin-bottom: 4px;
 }
 
 .body-text {
-    font-size: 12.5px;
-    line-height: 1.6;
+    font-size: clamp(10.5px, 2.5vw, 12.5px);
+    line-height: 1.5;
     color: var(--text-navy);
-    padding: 0 8px;
+    padding: 0 2px;
 }
 
-/* Info Grid Layout */
+/* Info Box / Details Grid */
 .info-container {
     display: flex;
     flex-direction: column;
     border: 1px solid rgba(212, 175, 55, 0.4);
-    border-radius: 10px;
+    border-radius: 8px;
     background: rgba(255, 255, 255, 0.5);
-    padding: 14px 10px;
+    padding: clamp(10px, 2.5vw, 14px) clamp(6px, 2vw, 10px);
     gap: 10px;
-    margin-bottom: 16px;
+    margin-bottom: clamp(12px, 3vw, 16px);
 }
 
 .info-box {
@@ -209,63 +207,65 @@ body {
 }
 
 .info-icon {
-    width: 22px;
-    height: 22px;
-    margin-bottom: 5px;
+    width: clamp(18px, 4.5vw, 22px);
+    height: clamp(18px, 4.5vw, 22px);
+    margin-bottom: 3px;
 }
 
 .info-label {
-    font-size: 8.5px;
+    font-size: clamp(7.5px, 1.8vw, 8.5px);
     font-weight: 700;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     color: var(--gold-dark);
-    margin-bottom: 2px;
+    margin-bottom: 1px;
 }
 
 .info-value {
-    font-size: 12.5px;
+    font-size: clamp(11px, 2.5vw, 12.5px);
     font-weight: 700;
     color: var(--text-navy);
+    word-break: break-word;
 }
 
 .info-subvalue {
-    font-size: 9.5px;
+    font-size: clamp(8.5px, 2vw, 9.5px);
     color: var(--text-muted);
     margin-top: 1px;
+    word-break: break-word;
 }
 
 .info-separator {
     display: none;
 }
 
-/* Closing Section */
+/* Closing Callout */
 .closing-section {
-    margin-top: 8px;
+    margin-top: 4px;
 }
 
 .closing-quote {
     font-family: 'Pinyon Script', cursive;
-    font-size: 18px;
+    font-size: clamp(15px, 3.8vw, 18px);
     color: var(--text-navy);
 }
 
 .closing-line {
-    width: 70px;
+    width: clamp(50px, 12vw, 70px);
     height: 1px;
     background: var(--gold-dark);
-    margin: 6px auto 0 auto;
+    margin: 4px auto 0 auto;
     opacity: 0.6;
 }
 
-/* Footer & Wave Background Art Simulation */
+/* Footer & Waves Artwork */
 .poster-footer {
     position: relative;
     width: 100%;
-    margin-top: -18px;
-    padding: 35px 15px 20px 15px;
+    margin-top: -15px;
+    padding: 30px 10px 15px 10px;
     background: linear-gradient(180deg, rgba(3, 6, 18, 0) 0%, #060b19 35%, #030612 100%);
     text-align: center;
-    border-radius: 0 0 18px 18px;
+    border-radius: 0 0 16px 16px;
     z-index: 1;
 }
 
@@ -273,52 +273,39 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3px;
+    gap: 2px;
 }
 
 .code-icon {
     font-family: monospace;
-    font-size: 13px;
+    font-size: 12px;
     color: #e2e8f0;
     font-weight: 600;
-    margin-bottom: 1px;
 }
 
 .copyright {
-    font-size: 9.5px;
+    font-size: 9px;
     font-weight: 700;
     color: #cbd5e1;
 }
 
 .credits {
-    font-size: 8.5px;
+    font-size: 8px;
     color: #94a3b8;
 }
 
 .footer-heart {
     color: var(--accent-red);
     font-size: 7.5px;
-    margin-top: 3px;
+    margin-top: 2px;
 }
 
-/* Desktop & Tablet Optimization */
-@media (min-width: 768px) {
-    .poster-container {
-        max-width: 580px;
-    }
-
-    .card-border-inner {
-        padding: 40px 30px 28px 30px;
-    }
-
-    .main-title {
-        font-size: 42px;
-    }
-
+/* Layout Switch for Larger Mobile / Tablet / Desktop Screens */
+@media (min-width: 520px) {
     .info-container {
         flex-direction: row;
         align-items: center;
-        padding: 14px;
+        padding: 14px 8px;
     }
 
     .info-separator {
