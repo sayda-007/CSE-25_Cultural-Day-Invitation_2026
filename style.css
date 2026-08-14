@@ -127,6 +127,7 @@ body {
     margin: 0 auto 12px;
 }
 
+
 /* ==================================================
    INVITATION MESSAGE
    ================================================== */
@@ -143,7 +144,7 @@ body {
 
 .message h2 {
     margin-bottom: 20px;
-    font-size: 1.35rem;
+    font-size: 2rem;
     font-weight: 600;
     color: #7b2430;
 }
@@ -152,9 +153,9 @@ body {
 /* Message paragraphs */
 
 .message p {
-    font-size: 1rem;
-    line-height: 1.8;
-    margin-bottom: 15px;
+    font-size: 1.04rem;
+    line-height: 1.5;
+    margin-bottom: 8px;
 }
 
 
@@ -167,6 +168,78 @@ body {
     font-size: 1.2rem;
     color: #b28a4a;
 }
+
+
+/* ==================================================
+   EVENT DETAILS
+   ================================================== */
+
+.event-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+
+/* Individual event box */
+
+.event-item {
+    flex: 1;
+    padding: 25px 15px;
+    text-align: center;
+    border: 1px solid #b28a4a;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.35);
+}
+
+
+/* Event labels */
+
+.event-item h2 {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #6b232d;
+}
+
+
+/* Main event information */
+
+.event-item p {
+    margin-bottom: 8px;
+    font-size: 1.04rem;
+    font-weight: 700;
+    color: #061d47;
+}
+
+
+/* Secondary information */
+
+.event-item span {
+    font-size: 0.9rem;
+    color: #3f2806;
+}
+
+
+/* Venue needs a little more room */
+
+.event-item:nth-child(3) p {
+    font-size: 1.04rem;
+    line-height: 1.4;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -238,6 +311,7 @@ body {
 
     .main-title {
         font-size: 3rem;
+
         margin: 25px 0 15px;
     }
 
@@ -248,20 +322,39 @@ body {
 
     .quote {
         font-size: 0.95rem;
+
         margin: 15px 0;
     }
 
-}
 
-.message {
-    margin-top: 30px;
-}
+    /* ----------------------------------------------
+       INVITATION MESSAGE
+       ---------------------------------------------- */
 
-.message h2 {
-    font-size: 1.1rem;
-}
+    .message {
+        margin-top: 30px;
+    }
 
-.message p {
-    font-size: 0.9rem;
-    line-height: 1.7;
+
+    .message h2 {
+        font-size: 1.1rem;
+    }
+
+
+    .message p {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+
+    /* ----------------------------------------------
+       EVENT DETAILS
+       ---------------------------------------------- */
+
+    .event-details {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 35px;
+    }
+
 }
