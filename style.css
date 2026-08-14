@@ -15,6 +15,8 @@
 
 body {
     min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
 
     background:
 
@@ -51,6 +53,7 @@ body {
     top: 55px;
     left: 70px;
     z-index: 0;
+    pointer-events: none;
 }
 
 
@@ -65,6 +68,7 @@ body {
     right: 70px;
     z-index: 0;
     filter: sepia(1) saturate(1.5);
+    pointer-events: none;
 }
 
 
@@ -90,7 +94,6 @@ body {
     min-height: 100vh;
     margin: 40px auto;
     padding: 50px;
-
     position: relative;
     z-index: 1;
 
@@ -117,9 +120,7 @@ body {
 .invitation-header img {
     width: 120px;
     height: auto;
-
     display: block;
-
     margin: 0 auto 20px;
 }
 
@@ -130,7 +131,6 @@ body {
     font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 3px;
-
     color: #7b2430;
 }
 
@@ -139,10 +139,8 @@ body {
 
 .tagline {
     margin-top: 10px;
-
     font-size: 0.8rem;
     letter-spacing: 4px;
-
     color: #8a6a38;
 }
 
@@ -153,74 +151,23 @@ body {
 
 .main-title {
     text-align: center;
-
     font-size: 5rem;
     font-weight: 700;
-
-    line-height: 0.95;
-
-    margin: 35px 0 25px;
+    margin: 35px 0 20px;
 }
 
 
-/* --------------------------------------------------
-   CULTURAL
-   -------------------------------------------------- */
+/* "Cultural" */
 
 .main-title span:first-child {
-    display: block;
-
     color: #071e49;
 }
 
 
-/* --------------------------------------------------
-   DAY
-   -------------------------------------------------- */
+/* "Day" */
 
 .main-title span:last-child {
-    display: block;
-
-    position: relative;
-
     color: #7b2430;
-
-    margin-top: 5px;
-}
-
-
-/* --------------------------------------------------
-   GOLD DECORATIVE FLOURISHES BESIDE "DAY"
-   -------------------------------------------------- */
-
-.main-title span:last-child::before,
-.main-title span:last-child::after {
-    content: "〰";
-
-    position: absolute;
-
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    font-size: 2.2rem;
-    font-weight: 400;
-
-    color: #b28a4a;
-}
-
-
-/* Left flourish */
-
-.main-title span:last-child::before {
-    right: calc(50% + 150px);
-}
-
-
-/* Right flourish */
-
-.main-title span:last-child::after {
-    left: calc(50% + 150px);
 }
 
 
@@ -229,38 +176,23 @@ body {
    ================================================== */
 
 .quote {
-    max-width: 620px;
-
-    margin: 25px auto 0;
-
-    padding: 0 15px;
-
     text-align: center;
-
+    margin: 20px 0;
     font-size: 1.15rem;
-    line-height: 1.6;
-
     font-style: italic;
-
     color: #5f513e;
 }
 
 
-/* --------------------------------------------------
-   DECORATIVE GOLD LINE ABOVE QUOTE
-   -------------------------------------------------- */
+/* Decorative line above quote */
 
 .quote::before {
     content: "";
-
     display: block;
-
-    width: 65px;
+    width: 60px;
     height: 2px;
-
-    margin: 0 auto 15px;
-
     background: #b28a4a;
+    margin: 0 auto 12px;
 }
 
 
@@ -270,11 +202,8 @@ body {
 
 .message {
     max-width: 650px;
-
     margin: 45px auto 0;
-
     text-align: center;
-
     color: #40382e;
 }
 
@@ -283,10 +212,8 @@ body {
 
 .message h2 {
     margin-bottom: 20px;
-
     font-size: 2rem;
     font-weight: 600;
-
     color: #7b2430;
 }
 
@@ -296,7 +223,6 @@ body {
 .message p {
     font-size: 1.04rem;
     line-height: 1.5;
-
     margin-bottom: 8px;
 }
 
@@ -305,13 +231,9 @@ body {
 
 .message::before {
     content: "✦";
-
     display: block;
-
     margin-bottom: 15px;
-
     font-size: 1.2rem;
-
     color: #b28a4a;
 }
 
@@ -322,12 +244,9 @@ body {
 
 .event-details {
     display: flex;
-
     justify-content: space-between;
     align-items: stretch;
-
     gap: 20px;
-
     margin-top: 50px;
 }
 
@@ -336,14 +255,10 @@ body {
 
 .event-item {
     flex: 1;
-
     padding: 25px 15px;
-
     text-align: center;
-
     border: 1px solid #b28a4a;
     border-radius: 15px;
-
     background: rgba(255, 255, 255, 0.35);
 }
 
@@ -352,12 +267,9 @@ body {
 
 .event-item h2 {
     margin-bottom: 10px;
-
     font-size: 0.9rem;
-
     text-transform: uppercase;
     letter-spacing: 3px;
-
     color: #6b232d;
 }
 
@@ -366,10 +278,8 @@ body {
 
 .event-item p {
     margin-bottom: 8px;
-
     font-size: 1.04rem;
     font-weight: 700;
-
     color: #061d47;
 }
 
@@ -378,7 +288,6 @@ body {
 
 .event-item span {
     font-size: 0.9rem;
-
     color: #3f2806;
 }
 
@@ -387,7 +296,6 @@ body {
 
 .event-item:nth-child(3) p {
     font-size: 1.04rem;
-
     line-height: 1.4;
 }
 
@@ -398,67 +306,51 @@ body {
 
 .cosmic-footer {
     margin-top: 50px;
-
     padding-top: 25px;
-
     text-align: center;
-
     border-top: 1px solid #b28a4a;
-
     color: #5f513e;
 }
 
 
-/* --------------------------------------------------
-   CLOSING MESSAGE
-   -------------------------------------------------- */
+/* Closing message */
 
 .closing-message {
-    margin-bottom: 25px;
-
+    margin-bottom: 15px;
+    text-align: center;
     font-size: 1.03rem;
-
     font-style: italic;
-
     color: #7b2430;
 }
 
 
-/* --------------------------------------------------
-   CODE SYMBOL
-   -------------------------------------------------- */
+/* Code symbol */
 
 .code-symbol {
-    margin-bottom: 15px;
-
-    font-size: 1.8rem;
+    margin: 10px auto 15px;
+    text-align: center;
+    font-size: 1.5rem;
     font-weight: 700;
-
     color: #b28a4a;
 }
 
 
-/* --------------------------------------------------
-   COPYRIGHT
-   -------------------------------------------------- */
+/* Copyright */
 
 .copyright {
     margin-bottom: 8px;
-
+    text-align: center;
     font-size: 0.7rem;
     font-weight: 700;
-
     color: #071e49;
 }
 
 
-/* --------------------------------------------------
-   FOOTER DESCRIPTION
-   -------------------------------------------------- */
+/* Footer description */
 
 .footer-description {
+    text-align: center;
     font-size: 0.83rem;
-
     color: #8a6a38;
 }
 
@@ -471,14 +363,32 @@ body {
 
 
     /* ----------------------------------------------
+       MOBILE BODY
+       ---------------------------------------------- */
+
+    body {
+        min-height: 100vh;
+
+        /*
+         * Creates a dedicated celestial area
+         * above the invitation card.
+         */
+        padding-top: 155px;
+        padding-bottom: 40px;
+
+        overflow-x: hidden;
+    }
+
+
+    /* ----------------------------------------------
        SATURN — MOBILE
        ---------------------------------------------- */
 
     .saturn {
-        width: 100px;
-
-        top: 25px;
+        width: 95px;
+        top: 35px;
         left: 15px;
+        z-index: 0;
     }
 
 
@@ -487,25 +397,40 @@ body {
        ---------------------------------------------- */
 
     .moon {
-        width: 70px;
-
+        width: 90px;
         top: 35px;
-        right: 20px;
+        right: 15px;
+        z-index: 0;
     }
 
 
     /* ----------------------------------------------
-       INVITATION CARD
+       INVITATION CARD — MOBILE
        ---------------------------------------------- */
 
     .invitation {
-        width: 94%;
+        /*
+         * Narrower card so the cosmic background
+         * remains visible around it.
+         */
+        width: 88%;
+
+        /*
+         * Let the card grow according to its content.
+         * Do not force it to be viewport height.
+         */
+        min-height: auto;
+
+        /*
+         * Card begins after the celestial area.
+         */
+        margin: 0 auto 40px;
 
         padding: 25px;
 
-        margin: 20px auto;
-
         border-radius: 20px;
+
+        z-index: 1;
     }
 
 
@@ -524,7 +449,6 @@ body {
 
     .batch {
         font-size: 0.9rem;
-
         letter-spacing: 2px;
     }
 
@@ -535,7 +459,6 @@ body {
 
     .tagline {
         font-size: 0.65rem;
-
         letter-spacing: 2px;
     }
 
@@ -546,30 +469,7 @@ body {
 
     .main-title {
         font-size: 3rem;
-
-        line-height: 0.95;
-
-        margin: 25px 0 20px;
-    }
-
-
-    /* Smaller decorative flourishes on mobile */
-
-    .main-title span:last-child::before,
-    .main-title span:last-child::after {
-        font-size: 1.4rem;
-    }
-
-
-    /* Position mobile flourishes */
-
-    .main-title span:last-child::before {
-        right: calc(50% + 90px);
-    }
-
-
-    .main-title span:last-child::after {
-        left: calc(50% + 90px);
+        margin: 25px 0 15px;
     }
 
 
@@ -578,24 +478,8 @@ body {
        ---------------------------------------------- */
 
     .quote {
-        max-width: 100%;
-
-        padding: 0 5px;
-
         font-size: 0.95rem;
-
-        line-height: 1.5;
-
-        margin: 20px auto 0;
-    }
-
-
-    /* Smaller decorative line on mobile */
-
-    .quote::before {
-        width: 50px;
-
-        margin-bottom: 10px;
+        margin: 15px 0;
     }
 
 
@@ -615,7 +499,6 @@ body {
 
     .message p {
         font-size: 0.9rem;
-
         line-height: 1.7;
     }
 
@@ -626,10 +509,18 @@ body {
 
     .event-details {
         flex-direction: column;
-
         gap: 15px;
-
         margin-top: 35px;
+    }
+
+
+    /* ----------------------------------------------
+       EVENT ITEMS
+       ---------------------------------------------- */
+
+    .event-item {
+        width: 100%;
+        padding: 20px 15px;
     }
 
 
@@ -638,37 +529,33 @@ body {
        ---------------------------------------------- */
 
     .cosmic-footer {
-        margin-top: 35px;
-
+        margin-top: 40px;
         padding-top: 20px;
+        text-align: center;
     }
 
 
     .closing-message {
-        margin-bottom: 20px;
-
-        font-size: 0.9rem;
-
-        line-height: 1.4;
+        text-align: center;
+        font-size: 0.95rem;
     }
 
 
     .code-symbol {
-        margin-bottom: 12px;
-
-        font-size: 1.5rem;
+        text-align: center;
+        font-size: 1.3rem;
     }
 
 
     .copyright {
-        font-size: 0.65rem;
+        text-align: center;
+        font-size: 0.68rem;
     }
 
 
     .footer-description {
+        text-align: center;
         font-size: 0.75rem;
-
-        line-height: 1.4;
     }
 
 }
