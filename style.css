@@ -232,9 +232,36 @@ body {
 }
 
 
+/* ==================================================
+   INVITATION FOOTER
+   ================================================== */
 
+.invitation-footer {
+    margin-top: 50px;
+    padding-top: 25px;
+    text-align: center;
+    border-top: 1px solid #b28a4a;
+    color: #5f513e;
+}
 
+.invitation-footer p:first-child {
+    margin-bottom: 15px;
+    font-size: 1.03rem;
+    font-style: italic;
+    color: #7b2430;
+}
 
+.invitation-footer p:nth-child(2) {
+    margin-bottom: 8px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #071e49;
+}
+
+.invitation-footer p:last-child {
+    font-size: 0.83rem;
+    color: #8a6a38;
+}
 
 
 
