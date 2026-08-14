@@ -17,7 +17,7 @@ body {
 }
 
 
-/* Invitation Content */
+/* Invitation Container */
 .invitation {
     width: min(90%, 900px);
     min-height: 100vh;
@@ -32,16 +32,31 @@ body {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
 }
 
+/* Invitation Header */
+.invitation-header {
+    text-align: center;
+}
+
 .invitation-header img {
     width: 120px;
     height: auto;
     display: block;
-    margin: 0 auto;
+   margin: 0 auto 20px;
 }
 
+.batch {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #7b2430;
+}
 
-
-
+.tagline {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    color: #8a6a38;
+}
 
 
 
@@ -58,7 +73,7 @@ body {
 
 
 /* Responsive Design */
-@media (max-width: 600px) {
+    @media (max-width: 600px) {
 
     .invitation {
         width: 94%;
@@ -67,10 +82,18 @@ body {
         border-radius: 20px;
     }
 
-}
+    .invitation-header img {
+        width: 90px;
+    }
 
-.invitation-header img {
-    width: 90px;
-}
+    .batch {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+    }
+
+    .tagline {
+        font-size: 0.65rem;
+        letter-spacing: 2px;
+    }
 
 }
