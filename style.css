@@ -6,7 +6,8 @@
 :root {
     /* Color Palette */
     --bg-space-dark: #030611;
-    --bg-space-glow: #0a1733;
+    --bg-space-glow: #122854;
+    /* Brighter deep space blue glow */
     --card-cream-light: #fdf8ed;
     --card-cream-dark: #eee0c4;
     --gold-primary: #cba358;
@@ -24,7 +25,7 @@
 }
 
 /* ==========================================================================
-   2. GLOBAL RESET & STARRY NIGHT BACKGROUND
+   2. GLOBAL RESET & BRIGHTER STARRY NIGHT BACKGROUND
    ========================================================================== */
 *,
 *::before,
@@ -43,7 +44,7 @@ body {
 body {
     background-color: var(--bg-space-dark);
     background-image:
-        radial-gradient(ellipse at 50% 15%, var(--bg-space-glow) 0%, rgba(3, 6, 17, 0.95) 70%);
+        radial-gradient(ellipse at 50% 20%, var(--bg-space-glow) 0%, rgba(3, 6, 17, 0.98) 80%);
     font-family: var(--font-serif-body);
     display: flex;
     justify-content: center;
@@ -55,7 +56,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Primary Layer: Clear, Noticeable Tiny Dot Sparkles */
+/* Primary Layer: Clear Bright Star Sparkles */
 body::before {
     content: "";
     position: fixed;
@@ -82,7 +83,7 @@ body::before {
     animation: tinySparkleTwinkle 3s ease-in-out infinite alternate;
 }
 
-/* Secondary Layer: Offset Dot Field for Extra Depth */
+/* Secondary Layer: Depth Star Field */
 body::after {
     content: "";
     position: fixed;
@@ -109,18 +110,18 @@ body::after {
 
 @keyframes tinySparkleTwinkle {
     0% {
-        opacity: 0.45;
+        opacity: 0.65;
         transform: scale(0.98);
     }
 
     50% {
         opacity: 1;
-        transform: scale(1.02);
-        filter: drop-shadow(0 0 3px rgba(255, 230, 150, 0.85));
+        transform: scale(1.05);
+        filter: drop-shadow(0 0 4px rgba(255, 230, 150, 0.95));
     }
 
     100% {
-        opacity: 0.65;
+        opacity: 0.8;
         transform: scale(1);
     }
 }
@@ -173,7 +174,7 @@ body::after {
 }
 
 /* ==========================================================================
-   4. ANIMATED SPARKLE & STAR ACCENTS
+   4. ANIMATED SPARKLE ACCENTS
    ========================================================================== */
 .sparkle {
     position: absolute;
@@ -192,7 +193,7 @@ body::after {
 
     0%,
     100% {
-        opacity: 0.25;
+        opacity: 0.35;
         transform: scale(0.6) rotate(0deg);
     }
 
@@ -526,117 +527,119 @@ body::after {
 }
 
 /* ==========================================================================
-   11. UNIVERSAL MOBILE SCALING (20% TOTAL MARGIN / 10% EACH SIDE)
+   11. MOBILE RESPONSIVENESS (22% BACKGROUND SPACE & CLEAR CELESTIALS)
    ========================================================================== */
 @media (max-width: 600px) {
     body {
         padding: 20px 0;
     }
 
-    /* Card width set to 80%, giving 20% total dark background space (10% left, 10% right) */
+    /* Card uses 78% of the screen width, leaving 22% (11% on each side) for starry sky */
     .wrapper {
-        width: 80%;
-        max-width: 360px;
+        width: 78%;
+        max-width: 350px;
         margin: 0 auto;
     }
 
-    /* Celestials placed nicely inside the 10% side margins */
+    /* Saturn pushed cleanly into the left gutter (no border overlap) */
     .celestial.saturn {
-        left: -15px;
-        top: 30%;
-        width: 22px;
-        height: 22px;
+        left: -28px;
+        top: 31%;
+        width: 24px;
+        height: 24px;
     }
 
+    /* Moon floating cleanly in top-right background */
     .celestial.moon {
-        right: -12px;
-        top: 8px;
-        width: 18px;
-        height: 18px;
+        right: -22px;
+        top: 6px;
+        width: 20px;
+        height: 20px;
     }
 
+    /* Sparkles positioned in the dynamic side margins */
     .sp-1,
     .sp-3,
     .sp-5 {
-        left: -10px;
+        left: -16px;
     }
 
     .sp-2,
     .sp-4,
     .sp-6 {
-        right: -10px;
+        right: -16px;
     }
 
     .poster-card {
-        border-radius: 100px 100px 16px 16px;
+        border-radius: 96px 96px 16px 16px;
         padding: 8px;
     }
 
     .card-border-outer {
-        border-radius: 94px 94px 12px 12px;
+        border-radius: 90px 90px 12px 12px;
     }
 
     .card-border-inner {
-        border-radius: 88px 88px 8px 8px;
-        padding: 24px 12px 18px 12px;
+        border-radius: 84px 84px 8px 8px;
+        padding: 22px 10px 16px 10px;
     }
 
     .dcc-logo {
-        height: 58px;
+        height: 56px;
     }
 
     .header-tag {
-        font-size: 12px;
-        letter-spacing: 1.8px;
+        font-size: 11.5px;
+        letter-spacing: 1.6px;
     }
 
     .sub-tagline {
-        font-size: 9.5px;
-        letter-spacing: 2px;
-        margin-bottom: 16px;
+        font-size: 9px;
+        letter-spacing: 1.8px;
+        margin-bottom: 14px;
     }
 
     .title-cultural {
-        font-size: 29px;
-        letter-spacing: 1.2px;
+        font-size: 27px;
+        letter-spacing: 1px;
     }
 
     .title-day {
-        font-size: 32px;
-        letter-spacing: 1.8px;
+        font-size: 30px;
+        letter-spacing: 1.5px;
     }
 
     .flourish-svg {
-        width: 24px;
-        height: 12px;
+        width: 22px;
+        height: 11px;
     }
 
     .quote {
-        font-size: 15px;
+        font-size: 14.5px;
     }
 
     .invitation-body {
-        font-size: 14.5px;
-        line-height: 1.38;
+        font-size: 14px;
+        line-height: 1.36;
     }
 
     .salutation {
-        font-size: 16px;
+        font-size: 15.5px;
     }
 
     .details-box {
         grid-template-columns: 1fr;
-        gap: 14px;
-        padding: 16px 8px;
-        margin: 18px 0;
+        gap: 12px;
+        padding: 14px 8px;
+        margin: 16px 0;
     }
 
     .col-value {
-        font-size: 12px;
+        font-size: 11.5px;
     }
 
     .col-sub {
-        font-size: 10px;
+        font-size: 9.5px;
     }
 
     .detail-col:not(:last-child)::after {
@@ -645,7 +648,7 @@ body::after {
 
     .detail-col:not(:last-child) {
         border-bottom: 1px dashed rgba(203, 163, 88, 0.5);
-        padding-bottom: 12px;
+        padding-bottom: 10px;
     }
 
     .closing-quote {
@@ -657,6 +660,6 @@ body::after {
     }
 
     .tagline {
-        font-size: 9.5px;
+        font-size: 9px;
     }
 }
