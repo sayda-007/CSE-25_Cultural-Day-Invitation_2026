@@ -1,0 +1,21 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Invitation Container */
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 20% 20%, #172b50 0%, transparent 25%),
+        radial-gradient(circle at 80% 70%, #321b35 0%, transparent 30%),
+        #07152b; 
+}
+
+/* Invitation Content */
+.invitation {
+    min-height: 100vh;
+}
+
