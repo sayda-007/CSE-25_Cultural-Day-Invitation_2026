@@ -58,6 +58,20 @@ body {
     color: #8a6a38;
 }
 
+.main-title {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 700;
+    margin: 35px 0 20px;
+}
+
+.main-title span:first-child {
+    color: #071e49;
+}
+
+.main-title span:last-child {
+    color: #7b2430;
+}
 
 
 
@@ -73,7 +87,7 @@ body {
 
 
 /* Responsive Design */
-   @media (max-width: 600px) {
+@media (max-width: 600px) {
 
     .invitation {
         width: 94%;
@@ -94,6 +108,11 @@ body {
     .tagline {
         font-size: 0.65rem;
         letter-spacing: 2px;
+    }
+
+    .main-title {
+        font-size: 3rem;
+        margin: 25px 0 15px;
     }
 
 }
