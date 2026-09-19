@@ -71,7 +71,11 @@ The invitation is designed for different screen sizes with:
 
 ## 🖼️ Project Preview
 
-![CSE-25 Cultural Day](./assets/CSE-25_Cultural-Day-Invitation_2026.JPG)
+### 🖥️ Desktop
+![CSE-25 Cultural Day](./assets/CulturalDayInvitation.JPG)
+
+### 📱 Mobile
+![CSE-25 Cultural Day](./assets/mobile.jpeg)
 
 * * *
 
