@@ -64,8 +64,10 @@ The invitation is designed for different screen sizes with:
 
 ## 🛠️ Technologies Used
 
-- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-- ![CSS](https://img.shields.io/badge/-CSS-000?logo=CSS)
+- <img width="30" height="30" alt="image" src="https://github.com/user-attachments/assets/6716beac-8e8b-4d2b-af31-85d676feef65" />
+
+- <img width="30" height="30" alt="image" src="https://github.com/user-attachments/assets/1b696412-d3cb-4888-89ec-ac7115c0ca93" />
+
 
 * * *
 
