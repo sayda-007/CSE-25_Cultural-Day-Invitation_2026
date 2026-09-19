@@ -71,18 +71,23 @@ The invitation is designed for different screen sizes with:
 
 ## 🖼️ Project Preview
 
+<table>
+  <td>
+    
 ### 🖥️ Desktop
 
 <p align="center">
-  <img src="./assets/CulturalDayInvitation.JPG" alt="Dev Stack Desktop Preview" width="900">
+  <img src="./assets/desktop.JPG" alt="Dev Stack Desktop Preview" width="400">
 </p>
 
 ### 📱 Mobile
 
 <p align="center">
-  <img src="./assets/mobile.jpeg" alt="Dev Stack Mobile Preview" width="400">
+  <img src="./assets/mobile.jpeg" alt="Dev Stack Mobile Preview" width="200">
 </p>
 
+</td>
+</table>
 
 * * *
 
